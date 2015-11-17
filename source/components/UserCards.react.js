@@ -1,5 +1,6 @@
 var React = require('react');
 var Grid = require('./Grid.react');
+var Pager = require('./Pager.react');
 var GridFilter = require('./GridFilter.react');
 var Search = require('./Search.react');
 var UserCardsStore = require('../stores/usercards_store.js');
@@ -17,6 +18,7 @@ var UserCards = React.createClass({
  
               <div className="grid-container">
                 <Grid store={UserCardsStore}/>
+                <Pager store={UserCardsStore}/>
               </div>
             </div>
   }

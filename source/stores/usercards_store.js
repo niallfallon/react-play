@@ -13,6 +13,8 @@ for(var count = 0; count < 1000; count++) {
 
 var UserCardsStore = {
   storeName: 'usercards',
+  pageSize: 100,
+  currentPageNumber: 1,
   columns: [
     {key: 0, title: 'Name', field: 'name'},
     {key: 1, title: 'Age', field: 'age'},
@@ -25,7 +27,7 @@ var UserCardsStore = {
     if (!this.displayRows) {
       this.displayRows = this.rows;
     }
-    return this.displayRows;
+    return this.getCurrentPage();
   },
 
   search: function(searchString) {
@@ -33,6 +35,24 @@ var UserCardsStore = {
     this.displayRows = this.rows.filter(function(row) {
       return row.name.indexOf(searchString) > -1;
     });
+  },
+
+  getCurrentPage: function() {
+    var start = this.pageSize * (this.currentPageNumber - 1);
+    var end = start + this.pageSize;
+    return this.displayRows.slice(start, end);
+  },
+
+  prev: function() {
+    // need to check for upper limit
+    if (this.currentPageNumber > 1) {
+      this.currentPageNumber = this.currentPageNumber - 1;
+    }
+  },
+
+  next: function() {
+    // need to check for upper limit
+    this.currentPageNumber = this.currentPageNumber + 1;
   }
 };
 
@@ -42,6 +62,14 @@ AppDispatcher.register(function(payload) {
   switch(payload.eventName) {
     case 'search-' + UserCardsStore.storeName:
       UserCardsStore.search(payload.searchString);
+      UserCardsStore.trigger('change');
+      break;
+    case 'pageNext-' + UserCardsStore.storeName:
+      UserCardsStore.next();
+      UserCardsStore.trigger('change');
+      break;
+    case 'pagePrev-' + UserCardsStore.storeName:
+      UserCardsStore.prev();
       UserCardsStore.trigger('change');
       break;
   } 

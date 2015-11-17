@@ -23105,7 +23105,7 @@ var routes = {
 
 ReactDOM.render(React.createElement(Router, { routes: routes }), document.getElementById('react-application'));
 
-},{"./components/About.react":208,"./components/Application.react":209,"./components/Inbox.react":212,"./components/UserCards.react":215,"./dispatcher":216,"react":206,"react-dom":27,"react-router":47}],208:[function(require,module,exports){
+},{"./components/About.react":208,"./components/Application.react":209,"./components/Inbox.react":212,"./components/UserCards.react":216,"./dispatcher":217,"react":206,"react-dom":27,"react-router":47}],208:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -23210,6 +23210,10 @@ var Grid = React.createClass({
 
   componentDidMount: function componentDidMount() {
     this.props.store.bind('change', this.storeChanged);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    this.props.store.unbind('change', this.storeChanged);
   },
 
   storeChanged: function storeChanged() {
@@ -23471,6 +23475,81 @@ module.exports = Menu;
 
 var React = require('react');
 var AppDispatcher = require('../dispatcher');
+
+var Pager = React.createClass({
+  displayName: 'Pager',
+
+  componentDidMount: function componentDidMount() {
+    this.props.store.bind('change', this.storeChanged);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    this.props.store.unbind('change', this.storeChanged);
+  },
+
+  storeChanged: function storeChanged() {
+    this.forceUpdate();
+  },
+
+  previous: function previous() {
+    AppDispatcher.dispatch({
+      eventName: 'pagePrev-' + this.props.store.storeName
+    });
+  },
+
+  next: function next() {
+    AppDispatcher.dispatch({
+      eventName: 'pageNext-' + this.props.store.storeName
+    });
+  },
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(
+        'div',
+        { className: 'grid_pagination' },
+        React.createElement(
+          'ul',
+          null,
+          React.createElement(
+            'li',
+            null,
+            React.createElement(
+              'button',
+              { className: 'default_Prev pg-button pag_prev_btn', onClick: this.previous, id: 'previousPage' },
+              'pager.prev'
+            )
+          ),
+          React.createElement(
+            'li',
+            null,
+            React.createElement(
+              'button',
+              { className: 'default_Next pg-button pag_next_btn', onClick: this.next, id: 'nextPage' },
+              'pager.next'
+            )
+          ),
+          React.createElement(
+            'li',
+            null,
+            'Page no. ',
+            this.props.store.currentPageNumber
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Pager;
+
+},{"../dispatcher":217,"react":206}],215:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var AppDispatcher = require('../dispatcher');
 var Search = React.createClass({
   displayName: 'Search',
 
@@ -23519,11 +23598,12 @@ var Search = React.createClass({
 
 module.exports = Search;
 
-},{"../dispatcher":216,"react":206}],215:[function(require,module,exports){
+},{"../dispatcher":217,"react":206}],216:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
 var Grid = require('./Grid.react');
+var Pager = require('./Pager.react');
 var GridFilter = require('./GridFilter.react');
 var Search = require('./Search.react');
 var UserCardsStore = require('../stores/usercards_store.js');
@@ -23552,7 +23632,8 @@ var UserCards = React.createClass({
       React.createElement(
         'div',
         { className: 'grid-container' },
-        React.createElement(Grid, { store: UserCardsStore })
+        React.createElement(Grid, { store: UserCardsStore }),
+        React.createElement(Pager, { store: UserCardsStore })
       )
     );
   }
@@ -23561,7 +23642,7 @@ var UserCards = React.createClass({
 
 module.exports = UserCards;
 
-},{"../stores/usercards_store.js":217,"./Grid.react":210,"./GridFilter.react":211,"./Search.react":214,"react":206}],216:[function(require,module,exports){
+},{"../stores/usercards_store.js":218,"./Grid.react":210,"./GridFilter.react":211,"./Pager.react":214,"./Search.react":215,"react":206}],217:[function(require,module,exports){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -23808,7 +23889,7 @@ var Dispatcher = (function () {
 
 module.exports = new Dispatcher();
 
-},{"invariant":26}],217:[function(require,module,exports){
+},{"invariant":26}],218:[function(require,module,exports){
 'use strict';
 
 var AppDispatcher = require('../dispatcher');
@@ -23816,12 +23897,14 @@ var MicroEvent = require('../utils/eventing');
 
 var rows = [];
 
-for (var count = 0; count < 100; count++) {
+for (var count = 0; count < 1000; count++) {
   rows.push({ name: 'Porky', age: 65, score: 7 }, { name: 'Peppa', age: 10, score: 3 }, { name: 'Babe', age: 2, score: 4 });
 }
 
 var UserCardsStore = {
   storeName: 'usercards',
+  pageSize: 100,
+  currentPageNumber: 1,
   columns: [{ key: 0, title: 'Name', field: 'name' }, { key: 1, title: 'Age', field: 'age' }, { key: 2, title: 'Score', field: 'score' }],
 
   rows: rows,
@@ -23830,7 +23913,7 @@ var UserCardsStore = {
     if (!this.displayRows) {
       this.displayRows = this.rows;
     }
-    return this.displayRows;
+    return this.getCurrentPage();
   },
 
   search: function search(searchString) {
@@ -23838,6 +23921,24 @@ var UserCardsStore = {
     this.displayRows = this.rows.filter(function (row) {
       return row.name.indexOf(searchString) > -1;
     });
+  },
+
+  getCurrentPage: function getCurrentPage() {
+    var start = this.pageSize * (this.currentPageNumber - 1);
+    var end = start + this.pageSize;
+    return this.displayRows.slice(start, end);
+  },
+
+  prev: function prev() {
+    // need to check for upper limit
+    if (this.currentPageNumber > 1) {
+      this.currentPageNumber = this.currentPageNumber - 1;
+    }
+  },
+
+  next: function next() {
+    // need to check for upper limit
+    this.currentPageNumber = this.currentPageNumber + 1;
   }
 };
 
@@ -23849,12 +23950,20 @@ AppDispatcher.register(function (payload) {
       UserCardsStore.search(payload.searchString);
       UserCardsStore.trigger('change');
       break;
+    case 'pageNext-' + UserCardsStore.storeName:
+      UserCardsStore.next();
+      UserCardsStore.trigger('change');
+      break;
+    case 'pagePrev-' + UserCardsStore.storeName:
+      UserCardsStore.prev();
+      UserCardsStore.trigger('change');
+      break;
   }
 });
 
 module.exports = UserCardsStore;
 
-},{"../dispatcher":216,"../utils/eventing":218}],218:[function(require,module,exports){
+},{"../dispatcher":217,"../utils/eventing":219}],219:[function(require,module,exports){
 /**
  * MicroEvent.js debug
  *
