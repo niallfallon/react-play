@@ -1,0 +1,4284 @@
+/* Override native browser defaults */
+/* line 3, ../../app/styles/_accessibility.scss */
+button, a {
+  background-color: transparent;
+  border: 0px;
+}
+/* line 6, ../../app/styles/_accessibility.scss */
+button:focus, a:focus {
+  outline: 1px dotted blue;
+}
+
+/* line 1, ../../app/styles/directives/_common.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../../app/styles/directives/_common.scss */
+.clearfix, .claro .dijitDialogPaneActionBar, .find_container {
+  *zoom: 1;
+}
+
+/* line 6, ../../app/styles/directives/_common.scss */
+.clearfix:before, .claro .dijitDialogPaneActionBar:before, .find_container:before, .clearfix:after, .claro .dijitDialogPaneActionBar:after, .find_container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+/* line 7, ../../app/styles/directives/_common.scss */
+.clearfix:after, .claro .dijitDialogPaneActionBar:after, .find_container:after {
+  clear: both;
+}
+
+/* line 9, ../../app/styles/directives/_common.scss */
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 14, ../../app/styles/directives/_common.scss */
+.text_right {
+  text-align: right !important;
+}
+
+/* line 18, ../../app/styles/directives/_common.scss */
+.absolute-right {
+  position: absolute;
+  right: 40px;
+}
+
+/* line 25, ../../app/styles/directives/_common.scss */
+.padding {
+  padding: 10px;
+}
+
+/* line 29, ../../app/styles/directives/_common.scss */
+.progress div {
+  font-size: smaller;
+  background: orange;
+  width: 0;
+}
+
+/* For explicitly adding underlines to links */
+/* line 37, ../../app/styles/directives/_common.scss */
+a.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 1, ../../app/styles/directives/_menu.scss */
+.navbar {
+  min-height: 2em;
+  display: inline-block;
+}
+
+/* line 5, ../../app/styles/directives/_menu.scss */
+.navbar .nav {
+  width: 100%;
+  padding-left: 4px;
+}
+/* line 9, ../../app/styles/directives/_menu.scss */
+.navbar .nav > li > button {
+  float: none;
+  padding: 10px 15px 10px;
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0 0px 0 white;
+}
+/* line 16, ../../app/styles/directives/_menu.scss */
+.navbar .nav > li > button.active {
+  background-color: #f3f3f3;
+  line-height: 15px;
+  color: #30748F;
+}
+
+/* line 25, ../../app/styles/directives/_menu.scss */
+.nav > li {
+  position: relative;
+}
+
+/* line 1, ../../app/styles/directives/_form.scss */
+input[type="text"] {
+  border: 1px solid #E3E3E3;
+  border-top: 1px solid #BABABA;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  background-color: #FFF;
+  float: left;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 15, ../../app/styles/directives/_form.scss */
+select {
+  border: 1px solid #E3E3E3;
+  border-top: 1px solid #BABABA;
+  padding: 0px 5px 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  background: #FFF url(./images/icob_dd_arrow_dark.png) right center no-repeat;
+  background-size: 20px 6px;
+  -webkit-padding-end: 25px;
+  -moz-padding-end: 5px;
+  cursor: pointer;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  height: 30px;
+  padding-right: 5px\9;
+  font-size: 1em;
+  color: #252525;
+}
+
+/* line 38, ../../app/styles/directives/_form.scss */
+.form_radio, .form_check {
+  float: left;
+}
+/* line 41, ../../app/styles/directives/_form.scss */
+.form_radio label, .form_check label {
+  display: inline-block;
+  padding-left: 5px;
+  vertical-align: bottom;
+}
+
+/* line 48, ../../app/styles/directives/_form.scss */
+label {
+  display: inline;
+  max-width: inherit;
+}
+
+/***********
+ Form Styling
+************/
+/* line 58, ../../app/styles/directives/_form.scss */
+.error {
+  outline: none;
+  border-color: #FF1A1A;
+  box-shadow: 0 0 10px #FF1A1A;
+}
+
+/* line 64, ../../app/styles/directives/_form.scss */
+.row_break {
+  padding-bottom: 10px;
+}
+
+/* line 68, ../../app/styles/directives/_form.scss */
+.fd_form {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+/* line 75, ../../app/styles/directives/_form.scss */
+.fd_form legend {
+  text-indent: -999em;
+  height: 1px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  width: 0px;
+}
+
+/* line 84, ../../app/styles/directives/_form.scss */
+.fd_form legend.show_legend {
+  text-indent: 0px;
+  float: none;
+  width: auto;
+  margin: 0px;
+  height: auto;
+  margin-bottom: 0px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+/* line 95, ../../app/styles/directives/_form.scss */
+.fd_form legend.show_legend.inline {
+  text-indent: 0px;
+  float: left;
+  width: 35%;
+  margin: 0px;
+  height: auto;
+  margin-bottom: 0px;
+  line-height: 20px;
+  padding: 5px 0px;
+  font-weight: normal;
+}
+
+/* line 107, ../../app/styles/directives/_form.scss */
+.fd_form fieldset {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+/* line 114, ../../app/styles/directives/_form.scss */
+.fd_form .form_container {
+  display: block;
+}
+
+/* line 118, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_col_left {
+  width: 50%;
+  float: left;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 126, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_col_right {
+  width: 50%;
+  float: right;
+  padding-left: 20px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+}
+
+/* line 135, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+/* line 142, ../../app/styles/directives/_form.scss */
+.form_row li {
+  list-style: none;
+}
+
+/* Label */
+/* line 147, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_label,
+.fd_form .form_container .form_row .form_label_spacer {
+  line-height: 20px;
+  display: block;
+}
+
+/* line 153, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_label label {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+/* line 158, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_label label .mandatory {
+  color: #CC5252;
+}
+
+/* Input */
+/* line 167, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row.inline .form_input {
+  text-align: right;
+}
+
+/* line 171, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row.inline > .form_input input.input_has_border[readonly=readonly] {
+  border: 1px solid #f3f3f3;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: default;
+}
+
+/* line 178, ../../app/styles/directives/_form.scss */
+.form_row .form_input input {
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  border-top: 1px solid #BABABA;
+  /* padding:7px 5px 8px; */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #FFFFFF;
+  /*-webkit-appearance:none;*/
+  float: left;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 199, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_input input.error {
+  border-color: #CC5252;
+}
+
+/* line 203, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_input input[readonly=readonly] {
+  border: 1px solid #FFFFFF;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 209, ../../app/styles/directives/_form.scss */
+.form_row .form_input select {
+  float: left;
+}
+
+/* line 214, ../../app/styles/directives/_form.scss */
+input[disabled=disabled] {
+  background-color: #F0F0F0 !important;
+}
+
+/* Select */
+/* line 219, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_select {
+  position: relative;
+}
+
+/* line 224, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_select select {
+  width: 100%;
+}
+
+/* line 229, ../../app/styles/directives/_form.scss */
+select::-ms-expand {
+  display: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+/* line 235, ../../app/styles/directives/_form.scss */
+input::-moz-focus-inner,
+select::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+  background-image: none !important;
+}
+
+/* line 243, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_select select.error {
+  border-color: #CC5252;
+}
+
+/* line 247, ../../app/styles/directives/_form.scss */
+.form_row .form_select select[disabled=disabled] {
+  background-color: #F0F0F0;
+  cursor: default;
+}
+
+/* Radio */
+/* line 255, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_radio ul {
+  display: block;
+  float: right;
+  width: 86%;
+}
+
+/* line 262, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_radio ul ul {
+  margin-left: 20px;
+  margin-top: -10px;
+  width: auto;
+}
+
+/* line 268, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_radio ul li {
+  float: left;
+  display: block;
+  position: relative;
+  margin-right: 0px;
+  clear: both;
+  width: 100%;
+}
+
+/* line 277, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_radio ul li input[type="radio"] {
+  position: absolute;
+  left: 0px;
+  top: 4px;
+}
+
+/* line 283, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_radio ul li input[type="number"] {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+}
+
+/* line 289, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_radio ul li label {
+  margin-left: 20px;
+  display: block;
+  line-height: 20px;
+  padding: 5px 0px;
+}
+
+/* line 297, ../../app/styles/directives/_form.scss */
+.radio-edit {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+/* line 302, ../../app/styles/directives/_form.scss */
+.radio-edit input[type="number"] {
+  width: 10em !important;
+}
+
+/* Checkbox */
+/* line 308, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_chbox {
+  position: relative;
+}
+
+/* line 312, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_chbox input {
+  position: absolute;
+  left: 0px;
+  top: 8px;
+}
+
+/* line 318, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_chbox label {
+  display: block;
+  margin-left: 20px;
+  line-height: 30px;
+}
+
+/* Date Input */
+/* line 325, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date_input {
+  position: relative;
+}
+
+/* line 329, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date_input input {
+  float: right;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  border-top: 1px solid #BABABA;
+  /* padding:7px 5px 8px; */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  height: 30px;
+  padding-right: 40px;
+  width: 120px;
+  padding-left: 5px;
+}
+
+/* line 349, ../../app/styles/directives/_form.scss */
+.form_row .form_date_input input[disabled=disabled] {
+  background-color: #F0F0F0;
+  cursor: default;
+}
+
+/* line 354, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date_input button {
+  float: right;
+  display: block;
+  border: 0px;
+  margin: 0px;
+  background-color: transparent;
+  background-image: url(../images/icon_datepicker.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px 20px;
+  text-indent: -999em;
+  height: 30px;
+  width: 30px;
+  margin-left: 2px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/* Date Range */
+/* line 377, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date {
+  width: 100%;
+  float: right;
+}
+
+/* line 382, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date ul {
+  float: left;
+  display: block;
+  width: 100%;
+}
+
+/* line 388, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date ul li {
+  float: left;
+  display: block;
+  position: relative;
+}
+
+/* line 394, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date ul li .date_spacer {
+  float: left;
+  display: block;
+  line-height: 20px;
+  text-align: center;
+  width: 20px;
+  padding: 5px 0px;
+}
+
+/* line 403, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date ul li input {
+  float: left;
+  width: 80px;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  border-top: 1px solid #BABABA;
+  /* padding:7px 5px 8px; */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  float: left;
+  height: 30px;
+}
+
+/* line 422, ../../app/styles/directives/_form.scss */
+.form_row .form_date ul li input[disabled=disabled] {
+  background-color: #F0F0F0;
+  cursor: default;
+}
+
+/* line 427, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date ul li button {
+  float: left;
+  display: block;
+  border: 0px;
+  margin: 0px;
+  background-color: #FFFFFF;
+  background-image: url(../images/icon_datepicker.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px 20px;
+  text-indent: -999em;
+  height: 30px;
+  width: 30px;
+  margin-left: 2px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0px;
+}
+
+/* line 446, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_date ul li label {
+  margin-left: 20px;
+  display: block;
+  line-height: 20px;
+  padding: 5px 0px;
+  float: left;
+  margin-right: 10px;
+  position: absolute;
+  text-indent: -999em;
+}
+
+/* Textarea */
+/* line 462, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_textarea textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  border-top: 1px solid #BABABA;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  height: 60px;
+}
+
+/* line 479, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_row .form_textarea textarea.error {
+  border-color: #CC5252;
+}
+
+/* line 483, ../../app/styles/directives/_form.scss */
+.form_row .form_textarea textarea[disabled=disabled] {
+  background-color: #F0F0F0;
+  cursor: default;
+}
+
+/* Form Actions */
+/* line 489, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_actions {
+  padding-top: 10px;
+  display: block;
+  clear: both;
+}
+
+/* line 495, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_actions .form_action_left {
+  float: left;
+  width: 50%;
+}
+
+/* line 500, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_actions .form_action_left input {
+  float: left !important;
+  margin-right: 10px;
+}
+
+/* line 505, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_actions .form_action_right {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* line 511, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_actions .form_action_right input {
+  float: right !important;
+  margin-left: 10px;
+}
+
+/* line 516, ../../app/styles/directives/_form.scss */
+.fd_form .form_container .form_actions div.action_link {
+  padding: 5px 0px;
+  line-height: 20px;
+  display: block;
+}
+
+/** Validation **/
+/* line 526, ../../app/styles/directives/_form.scss */
+input.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty {
+  border: 1px solid #CC5252 !important;
+}
+
+/* line 531, ../../app/styles/directives/_form.scss */
+.attempted-validation input.ng-invalid, .attempted-validation select.ng-invalid {
+  border: 1px solid #CC5252 !important;
+}
+
+/** Vendor-specific **/
+/* line 539, ../../app/styles/directives/_form.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 1, ../../app/styles/directives/_grid.scss */
+.fd-grid-filter {
+  display: inline-block;
+}
+
+/* line 5, ../../app/styles/directives/_grid.scss */
+#gridDiv {
+  height: 300px;
+}
+
+/****
+ Dojo Overrides 
+ *****/
+/* line 16, ../../app/styles/directives/_grid.scss */
+.dojoxGrid {
+  font-family: inherit;
+}
+
+/* line 20, ../../app/styles/directives/_grid.scss */
+.claro .dojoxGridMasterHeader {
+  background: white;
+  border-top: 0px;
+}
+
+/* line 25, ../../app/styles/directives/_grid.scss */
+.claro .dojoxGrid .dojoxGridCell {
+  text-align: left;
+  border: 1px solid #dddddd;
+  border-bottom: 0px solid;
+  padding: 5px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+/* line 34, ../../app/styles/directives/_grid.scss */
+.claro .dojoxGrid th.dojoxGridCell {
+  padding: 10px 5px;
+  background-color: #f3f3f3;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333333;
+  line-height: 20px;
+}
+
+/* line 43, ../../app/styles/directives/_grid.scss */
+.claro .dojoxGridHeader tr:first-child .dojoxGridCell {
+  border-top: 0px;
+}
+
+/*  */
+/* line 49, ../../app/styles/directives/_grid.scss */
+tr.lineitem {
+  background-color: #e9f7fd;
+  transition: all .5 ease;
+}
+
+/* line 55, ../../app/styles/directives/_grid.scss */
+tr.hidden {
+  display: none !important;
+}
+
+/* line 60, ../../app/styles/directives/_grid.scss */
+.sortswitch {
+  background: url(./images/icon_sort_indicator.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+}
+
+/* Toggle Transaction Split / Line Items */
+/* line 69, ../../app/styles/directives/_grid.scss */
+.btn_trans_toggle {
+  background-color: transparent;
+  background: url(./images/icon_transaction_toggle.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+  padding-left: 20px !important;
+  border: 0px;
+  border-radius: 0px;
+  webkit-appearance: none;
+  line-height: 20px;
+  height: 20px;
+}
+
+/* line 82, ../../app/styles/directives/_grid.scss */
+.btn_trans_toggle.isOpen {
+  background-position: 0px -20px;
+}
+
+/* Assign Icon to Split or Line Item */
+/* line 88, ../../app/styles/directives/_grid.scss */
+.icon_child_type {
+  background-color: transparent;
+  background: url(./images/icon_line_split_item.png);
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+  border: 0px;
+  padding-left: 20px !important;
+  border-radius: 0px;
+  webkit-appearance: none;
+  line-height: 20px;
+  height: 20px;
+  display: block;
+}
+/* line 101, ../../app/styles/directives/_grid.scss */
+.icon_child_type.line_item {
+  background-position: 0px 0px;
+}
+/* line 105, ../../app/styles/directives/_grid.scss */
+.icon_child_type.split_item {
+  background-position: 0px -20px;
+}
+
+/* line 111, ../../app/styles/directives/_grid.scss */
+.child_row_details {
+  float: right;
+  font-style: italic;
+  opacity: 0.5;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  line-height: 20px;
+}
+
+/* line 121, ../../app/styles/directives/_grid.scss */
+.child_details_container {
+  position: relative;
+  display: block;
+}
+
+/* line 126, ../../app/styles/directives/_grid.scss */
+table.grid_table tbody tr td .currency {
+  font-size: 0.8em;
+  vertical-align: baseline;
+}
+
+/* red for negative colors */
+/* line 132, ../../app/styles/directives/_grid.scss */
+.negative {
+  color: red;
+}
+
+/* Status */
+/* line 138, ../../app/styles/directives/_grid.scss */
+.status_icon {
+  background-image: url(../images/icon_sprite_status_x2.png);
+  background-position: 0px 0px;
+  background-size: 20px 320px;
+  background-repeat: no-repeat;
+  /* text-indent:-999em; */
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 150, ../../app/styles/directives/_grid.scss */
+.status_icon > span {
+  height: 20px;
+  width: 20px;
+  /*float:left;*/
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 159, ../../app/styles/directives/_grid.scss */
+.status_icon > span img {
+  width: 100%;
+}
+
+/* line 163, ../../app/styles/directives/_grid.scss */
+.status_reviewed_no > span img {
+  margin-top: 0px;
+}
+
+/* line 164, ../../app/styles/directives/_grid.scss */
+.status_reviewed_yes > span img {
+  margin-top: -20px;
+}
+
+/* line 165, ../../app/styles/directives/_grid.scss */
+.status_approved > span img {
+  margin-top: -40px;
+}
+
+/* line 166, ../../app/styles/directives/_grid.scss */
+.status_tax_no > span img {
+  margin-top: -60px;
+}
+
+/* line 167, ../../app/styles/directives/_grid.scss */
+.status_tax_yes > span img {
+  margin-top: -80px;
+}
+
+/* line 168, ../../app/styles/directives/_grid.scss */
+.status_dispute_no > span img {
+  margin-top: -100px;
+}
+
+/* line 169, ../../app/styles/directives/_grid.scss */
+.status_dispute_yes > span img {
+  margin-top: -120px;
+}
+
+/* line 170, ../../app/styles/directives/_grid.scss */
+.status_comment_no > span img {
+  margin-top: -140px;
+}
+
+/* line 171, ../../app/styles/directives/_grid.scss */
+.status_comment_yes > span img {
+  margin-top: -160px;
+}
+
+/* line 172, ../../app/styles/directives/_grid.scss */
+.status_receipt_no > span img {
+  margin-top: -180px;
+}
+
+/* line 173, ../../app/styles/directives/_grid.scss */
+.status_receipt_yes > span img {
+  margin-top: -200px;
+}
+
+/* line 174, ../../app/styles/directives/_grid.scss */
+.status_exported > span img {
+  margin-top: -220px;
+}
+
+/* line 175, ../../app/styles/directives/_grid.scss */
+.status_enhanced_car > span img {
+  margin-top: -240px;
+}
+
+/* line 176, ../../app/styles/directives/_grid.scss */
+.status_enhanced_hotel > span img {
+  margin-top: -260px;
+}
+
+/* line 177, ../../app/styles/directives/_grid.scss */
+.status_enhanced_flight > span img {
+  margin-top: -280px;
+}
+
+/* line 178, ../../app/styles/directives/_grid.scss */
+.status_enhanced_no > span img {
+  margin-top: 0px;
+}
+
+/* line 180, ../../app/styles/directives/_grid.scss */
+.grid-controls {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Dialog */
+/* line 4, ../../app/styles/directives/_dialog.scss */
+.fd-dialog {
+  max-width: 70%;
+}
+
+/* line 9, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialog {
+  background: white;
+  border: 0px;
+  max-width: 70%;
+}
+
+/* line 15, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogUnderlay {
+  background: #000;
+  opacity: 0.5;
+}
+
+/* line 20, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogTitleBar {
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+/* line 25, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogPaneActionBar {
+  background-color: #f3f3f3;
+  padding: 15px 20px !important;
+  margin-top: 0px !important;
+}
+
+/* line 31, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogTitle {
+  font-size: 1.6em;
+  line-height: 20px;
+  padding-right: 20px;
+}
+
+/* line 37, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogPaneContent {
+  border-top: 0px;
+}
+
+/* line 41, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogPaneContentArea {
+  margin: -21px -7px -10px -7px;
+  padding: 10px 0px;
+}
+
+/* line 46, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogPaneActionBar {
+  display: block;
+  clear: both;
+  background-color: #f3f3f3;
+  padding: 15px 20px !important;
+  margin-top: 0px !important;
+}
+
+/* line 56, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogCloseIcon {
+  background-image: url(./images/icon_dd_close_btn.png);
+  background-size: 10px 10px;
+  top: 25px;
+}
+
+/* line 62, ../../app/styles/directives/_dialog.scss */
+.claro .dijitDialogCloseIconHover {
+  background-position: 0 0;
+}
+
+/* Override for jQueryUI */
+/* line 67, ../../app/styles/directives/_dialog.scss */
+.modal_content_padding:after {
+  height: 0px !important;
+}
+
+/* line 2, ../../app/styles/directives/_datepicker.scss */
+input.dijitInputInner[type="text"], input.dijitInputField[type="text"] {
+  margin-bottom: 0px;
+  height: auto;
+}
+
+/* line 7, ../../app/styles/directives/_datepicker.scss */
+.dijitTextBox {
+  height: 30px !important;
+}
+
+/* line 11, ../../app/styles/directives/_datepicker.scss */
+.dijitInputInner {
+  height: 26px !important;
+}
+
+/* Pagination */
+/* line 3, ../../app/styles/directives/_pager.scss */
+.pager-container {
+  float: left;
+}
+
+/* line 7, ../../app/styles/directives/_pager.scss */
+.fd-pager {
+  display: block;
+  margin-top: 20px;
+}
+
+/* line 12, ../../app/styles/directives/_pager.scss */
+.row_count_selector {
+  float: left;
+  display: block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+/* line 18, ../../app/styles/directives/_pager.scss */
+.row_count_selector .row_label {
+  float: left;
+  display: block;
+  margin-right: 5px;
+}
+/* line 23, ../../app/styles/directives/_pager.scss */
+.row_count_selector .row_label label {
+  line-height: 30px;
+}
+/* line 28, ../../app/styles/directives/_pager.scss */
+.row_count_selector .row_select select, .row_count_selector select.selectbox {
+  width: 100%;
+}
+/* line 32, ../../app/styles/directives/_pager.scss */
+.row_count_selector .row_select {
+  float: left;
+  display: block;
+}
+/* line 37, ../../app/styles/directives/_pager.scss */
+.row_count_selector .row_result {
+  float: left;
+  line-height: 30px;
+  display: block;
+  margin-left: 10px;
+  min-width: 13em;
+  text-align: right;
+}
+
+/* line 50, ../../app/styles/directives/_pager.scss */
+.grid_pagination {
+  float: left;
+  display: block;
+  margin-bottom: 5px;
+}
+/* line 55, ../../app/styles/directives/_pager.scss */
+.grid_pagination ul li {
+  float: left;
+  display: block;
+  margin-right: 2px;
+}
+/* line 61, ../../app/styles/directives/_pager.scss */
+.grid_pagination button {
+  float: left;
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  background-color: #f3f3f3;
+  color: inherit;
+  cursor: pointer;
+}
+/* line 71, ../../app/styles/directives/_pager.scss */
+.grid_pagination ul li button:hover {
+  background-color: #e3e3e3;
+  text-decoration: none;
+}
+/* line 76, ../../app/styles/directives/_pager.scss */
+.grid_pagination .pag_current {
+  display: block;
+  background-color: #e3e3e3;
+}
+
+/* line 82, ../../app/styles/directives/_pager.scss */
+.pg-button {
+  width: 30px;
+  height: 30px;
+}
+
+/* line 87, ../../app/styles/directives/_pager.scss */
+.pag_prev_btn {
+  text-indent: -999em;
+  background-image: url(./images/icon_pag_blue.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 30px 60px;
+  overflow: hidden;
+}
+
+/* line 96, ../../app/styles/directives/_pager.scss */
+.pag_next_btn {
+  text-indent: -999em;
+  background-image: url(./images/icon_pag_blue.png);
+  background-position: 0px -30px;
+  background-repeat: no-repeat;
+  background-size: 30px 60px;
+  overflow: hidden;
+}
+
+/* line 105, ../../app/styles/directives/_pager.scss */
+.pag_current {
+  line-height: 30px;
+  text-align: center;
+  float: left;
+  display: block;
+  background-color: #e3e3e3;
+}
+
+/* line 113, ../../app/styles/directives/_pager.scss */
+.pag_divider {
+  line-height: 30px;
+  text-align: center;
+  float: left;
+  display: block;
+}
+
+/* line 120, ../../app/styles/directives/_pager.scss */
+.grid_pagination .btn_grey {
+  background-color: #e3e3e3;
+  color: #454545;
+  border-color: #e3e3e3;
+}
+
+/* line 1, ../../app/styles/directives/_button.scss */
+.btn_normal {
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  /* padding:7px 10px 7px; */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #cccccc;
+  overflow: visible;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 30px;
+  margin: 0px 3px;
+}
+/* line 20, ../../app/styles/directives/_button.scss */
+.btn_normal:disabled {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)" !important;
+}
+
+/** 
+  Buttons 
+**/
+/* line 31, ../../app/styles/directives/_button.scss */
+.btn_offset {
+  margin-top: 10px;
+}
+
+/* line 35, ../../app/styles/directives/_button.scss */
+.btn-link {
+  color: #666666;
+  padding-left: 0px;
+}
+/* line 38, ../../app/styles/directives/_button.scss */
+.btn-link:hover, .btn-link:focus {
+  text-decoration: underline;
+  color: #008EC7;
+}
+
+/* line 44, ../../app/styles/directives/_button.scss */
+.btn_primary {
+  background-color: #008EC7;
+  color: #FFF;
+  border-color: #008EC7;
+}
+
+/* line 50, ../../app/styles/directives/_button.scss */
+.btn_primary:disabled {
+  border-color: #bbb;
+}
+
+/* line 54, ../../app/styles/directives/_button.scss */
+.btn_grey {
+  background-color: #E3E3E3;
+  color: #454545;
+  border-color: #E3E3E3;
+}
+
+/* line 60, ../../app/styles/directives/_button.scss */
+.btn_upload {
+  background-image: url(./images/icon_btn_arrow_white_x2.png);
+  background-size: 50px 50px;
+  background-position: 68% 80%;
+  background-repeat: no-repeat;
+  background-color: #E3E3E3;
+  color: #454545;
+  border-color: #E3E3E3;
+  height: 100px;
+  width: 100px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+/***********
+ Button Arrows and Icons
+************/
+/* line 80, ../../app/styles/directives/_button.scss */
+.btn_arrow_left {
+  background-image: url(./images/icon_btn_arrow_white.png);
+  background-size: 20px 10px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 30px !important;
+}
+
+/* line 88, ../../app/styles/directives/_button.scss */
+.btn_icon {
+  background-image: url(./images/icon_sprite_dark.png);
+  background-position: 10px 0px;
+  background-repeat: no-repeat;
+  background-size: 16px 600px;
+  padding: 8px 14px 6px 30px;
+}
+
+/* line 96, ../../app/styles/directives/_button.scss */
+.btn_move_left {
+  margin-right: 10px;
+}
+
+/* line 100, ../../app/styles/directives/_button.scss */
+.btn_icon_filter {
+  background_position: 10px 0px;
+}
+
+/* line 104, ../../app/styles/directives/_button.scss */
+.btn_icon_save {
+  background-position: 10px -30px;
+}
+
+/* line 108, ../../app/styles/directives/_button.scss */
+.btn_icon_print {
+  background-position: 10px -210px;
+}
+
+/* line 112, ../../app/styles/directives/_button.scss */
+.btn_icon_settings {
+  background-position: 10px -150px;
+}
+
+/* line 116, ../../app/styles/directives/_button.scss */
+.btn_icon_output {
+  background-position: 10px -180px;
+}
+
+/* line 120, ../../app/styles/directives/_button.scss */
+.btn_icon_email {
+  background-position: 10px -240px;
+}
+
+/* line 124, ../../app/styles/directives/_button.scss */
+.btn_icon_approve, .btn_icon_review, .btn_icon_dispute {
+  background-image: url(./images/icon_sprite_light.png);
+}
+
+/* line 128, ../../app/styles/directives/_button.scss */
+.btn_icon_approve {
+  background-position: 10px -60px;
+}
+
+/* line 132, ../../app/styles/directives/_button.scss */
+.btn_icon_review {
+  background-position: 10px -91px;
+}
+
+/* line 136, ../../app/styles/directives/_button.scss */
+.btn_icon_dispute {
+  background-position: 10px -121px;
+}
+
+/* line 142, ../../app/styles/directives/_button.scss */
+.btn_launch_transaction {
+  background-image: url(./images/icon_launch_arrow.png);
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  height: 20px;
+  width: 20px;
+  text-indent: -999em;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  border: 0px solid;
+  border-radius: 0px;
+}
+
+/* line 157, ../../app/styles/directives/_button.scss */
+.edit_icon {
+  background-image: url(./images/icon_edit_pen.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  border: 0px solid;
+  text-indent: -999em;
+  outline: none;
+  position: relative;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+/* line 1, ../../app/styles/directives/_grid_table.scss */
+.fd-table-grid {
+  /* Allow the grid to contain a spinner */
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+/* line 8, ../../app/styles/directives/_grid_table.scss */
+.fd-table-grid .spinner {
+  background: url(./images/loader_30px.gif) rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+/* line 15, ../../app/styles/directives/_grid_table.scss */
+.grid_container {
+  width: 100%;
+  overflow: auto;
+}
+
+/* line 20, ../../app/styles/directives/_grid_table.scss */
+table.grid_table {
+  border-collapse: collapse;
+  border: 1px solid #DDDDDD;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+/* line 27, ../../app/styles/directives/_grid_table.scss */
+table.grid_table caption {
+  text-indent: -999em;
+  position: absolute;
+  float: left;
+  width: 0px;
+}
+/* line 35, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th {
+  position: relative;
+  padding: 10px 5px;
+  text-align: left;
+  border: 1px solid #DDDDDD;
+  border-bottom: 0px solid;
+  background-color: #F3F3F3;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333333;
+  line-height: 20px;
+  white-space: nowrap;
+}
+/* line 48, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th.sortable {
+  padding-right: 16px;
+}
+/* line 52, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th .hidden_table_label {
+  text-indent: -999em;
+  position: absolute;
+  float: left;
+  width: 0px;
+}
+/* line 59, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th .sortswitch {
+  display: inline-block;
+  height: 15px;
+  width: 16px;
+  vertical-align: middle;
+  top: 0px;
+}
+/* line 67, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th .sortswitch img {
+  width: 100%;
+}
+/* line 71, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th .sortswitch.active.ascending {
+  background-position: 0px -13px;
+}
+/* line 75, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th .sortswitch.active.descending {
+  background-position: 0px -27px;
+}
+/* line 81, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th#col_toggle_switch {
+  width: 30px;
+}
+/* line 85, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th#col_chbox {
+  width: 20px;
+}
+/* line 89, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th#col_go_cell {
+  width: 20px;
+}
+/* line 104, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr.child {
+  display: none;
+}
+/* line 108, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr:hover td {
+  background-color: #FFFFCC !important;
+}
+/* line 113, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr.child td {
+  background-color: #E9F7FD;
+}
+/* line 117, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr.owner td {
+  font-weight: bold;
+}
+/* line 123, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr.closed td {
+  background-color: #f3f3f3 !important;
+}
+/* line 127, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr.inactive td {
+  color: #999999;
+  font-style: italic;
+}
+/* line 132, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr td.value_cell {
+  text-align: right;
+}
+/* line 136, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr td .match {
+  background-color: #FFF5E8;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+/* line 143, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr td.status_cell {
+  width: 20px;
+  border-left: 0px solid;
+  border-right: 0px solid;
+}
+/* line 149, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody tr.highlight td {
+  background-color: #9FDDFC !important;
+  outline: inherit;
+}
+/* line 159, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody td {
+  padding: 2px 5px;
+  text-align: left;
+  border: 1px solid #DDDDDD;
+  line-height: 20px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+/* line 167, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody td.no-records {
+  background-image: url(./images/icon_msg_info.png);
+  background-repeat: no-repeat;
+  background-position: 34px 40px;
+  height: 100px;
+  padding-left: 60px;
+  font-size: 15px;
+}
+/* line 176, ../../app/styles/directives/_grid_table.scss */
+table.grid_table tbody td.loading {
+  height: 20em;
+  position: relative;
+}
+
+/* line 187, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th span.hidden_label,
+table.grid_table tbody td span.hidden_label {
+  text-indent: -999em;
+  float: left;
+  position: absolute;
+}
+
+/* line 194, ../../app/styles/directives/_grid_table.scss */
+table.grid_table thead th input,
+table.grid_table tbody td input {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 5, ../../app/styles/directives/_grid_filter.scss */
+.apply_filters .form_container .form_row {
+  margin-bottom: 0px;
+}
+/* line 8, ../../app/styles/directives/_grid_filter.scss */
+.apply_filters .form_container .form_row .form_input {
+  padding: 0px;
+}
+
+/* line 14, ../../app/styles/directives/_grid_filter.scss */
+.form_row {
+  margin-bottom: 10px;
+  position: relative;
+  /** Multi-select enumeration **/
+}
+/* line 19, ../../app/styles/directives/_grid_filter.scss */
+.form_row.inline {
+  float: left;
+  width: 100%;
+}
+/* line 27, ../../app/styles/directives/_grid_filter.scss */
+.form_row.inline .form_label {
+  width: 35%;
+}
+/* line 31, ../../app/styles/directives/_grid_filter.scss */
+.form_row.inline .form_input, .form_row.inline .form_select {
+  width: 65%;
+  float: right;
+}
+/* line 34, ../../app/styles/directives/_grid_filter.scss */
+.form_row.inline .form_input li, .form_row.inline .form_select li {
+  width: auto;
+}
+/* line 40, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_label {
+  line-height: 20px;
+  padding: 5px 0px;
+  float: left;
+}
+/* line 46, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_label label {
+  font-weight: bold;
+}
+/* line 50, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_label.no_label {
+  display: none !important;
+}
+/* line 61, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_input.no_label {
+  width: 94% !important;
+}
+/* line 65, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_input li {
+  width: 100%;
+  display: inline-block;
+}
+/* line 71, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_input input {
+  width: 100%;
+}
+/* line 88, ../../app/styles/directives/_grid_filter.scss */
+.form_row .split_options input {
+  width: 100%;
+}
+/* line 92, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_input fd-date-picker {
+  float: left;
+}
+/* line 96, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_select {
+  position: relative;
+}
+/* line 101, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_select select {
+  width: 100%;
+  padding-right: 26px;
+}
+/* line 106, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form_select.form_enum select {
+  width: 98%;
+}
+/* line 116, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum li {
+  margin: 10px 0px 0px 0px;
+  float: left;
+  width: 98%;
+}
+/* line 122, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum .bg_color_3 {
+  background-color: #C6EAFA;
+}
+/* line 126, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum .filter_item {
+  float: left;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+/* line 133, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum .filter_label {
+  line-height: 30px;
+  float: left;
+  display: block;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* line 141, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum .filter_value {
+  line-height: 20px;
+  float: left;
+  display: block;
+  margin-left: 10px;
+  padding: 5px 30px 5px 0px;
+}
+/* line 149, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum .remove_filter_btn {
+  height: 30px;
+  width: 30px;
+  margin: 0px;
+  padding: 0px;
+  text-indent: -999em;
+  background: transparent url(./images/icon_dd_close_btn.png) center center no-repeat;
+  background-size: 10px 10px;
+}
+/* line 159, ../../app/styles/directives/_grid_filter.scss */
+.form_row .form-enum .multi-select-field select {
+  width: 80%;
+}
+
+/* line 168, ../../app/styles/directives/_grid_filter.scss */
+.split_options ul {
+  width: 100%;
+  float: left;
+}
+/* line 172, ../../app/styles/directives/_grid_filter.scss */
+.split_options ul li {
+  width: 58%;
+  float: left;
+  margin-right: 2%;
+}
+/* line 178, ../../app/styles/directives/_grid_filter.scss */
+.split_options ul li:first-child {
+  width: 38%;
+}
+/* line 182, ../../app/styles/directives/_grid_filter.scss */
+.split_options ul .dijitTextBox {
+  width: 100%;
+}
+
+/* line 188, ../../app/styles/directives/_grid_filter.scss */
+.fd-date-range-filter-field fd-date-picker {
+  width: 48%;
+  display: inline-block;
+}
+/* line 191, ../../app/styles/directives/_grid_filter.scss */
+.fd-date-range-filter-field fd-date-picker .dijitTextBox {
+  width: 100%;
+}
+
+/* line 196, ../../app/styles/directives/_grid_filter.scss */
+.form_row_divider {
+  border-bottom: 1px solid #E3E3E3;
+  margin-bottom: 20px;
+  clear: both;
+  display: block;
+  margin-top: 10px;
+  height: 10px;
+}
+
+/* line 208, ../../app/styles/directives/_grid_filter.scss */
+.form_row .dijitComboBox .dijitButtonNode {
+  height: 28px;
+}
+
+/* line 213, ../../app/styles/directives/_grid_filter.scss */
+.remove-filter {
+  background: #E28080;
+  color: #FFF;
+  padding: 1px 4px;
+  margin-top: 7px;
+  position: absolute;
+  right: 9px;
+  cursor: pointer;
+}
+
+/* line 223, ../../app/styles/directives/_grid_filter.scss */
+.fd-filter-field, .saved-filters, .add-new-filter {
+  display: inline-block;
+  width: 94% !important;
+}
+
+/* line 229, ../../app/styles/directives/_grid_filter.scss */
+.field-operator {
+  padding-right: 10px;
+}
+
+/* line 233, ../../app/styles/directives/_grid_filter.scss */
+.filter-field-wrapper {
+  position: relative;
+}
+
+/* Form in a Modal */
+/* line 238, ../../app/styles/directives/_grid_filter.scss */
+.modal_content_padding {
+  padding: 20px 20px 10px;
+  overflow: auto;
+  max-height: 400px;
+}
+
+/* line 244, ../../app/styles/directives/_grid_filter.scss */
+.modal_content_padding_language {
+  padding: 20px 20px 10px;
+  overflow: visible !important;
+  max-height: 410px !important;
+}
+
+/* Bootstrap Override */
+/* line 252, ../../app/styles/directives/_grid_filter.scss */
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  margin-bottom: 0px;
+}
+
+/* line 261, ../../app/styles/directives/_grid_filter.scss */
+span.hidden_label {
+  float: left;
+  text-indent: -999em;
+  position: absolute;
+  display: block;
+  width: 0px;
+}
+
+/* line 3, ../../app/styles/directives/_grid_settings.scss */
+.fd-grid-settings #col_detail_chbox {
+  width: 50px;
+}
+/* line 7, ../../app/styles/directives/_grid_settings.scss */
+.fd-grid-settings #col_position_value {
+  width: 100px;
+}
+/* line 10, ../../app/styles/directives/_grid_settings.scss */
+.fd-grid-settings .sort_container input {
+  padding-left: 4px;
+}
+/* line 14, ../../app/styles/directives/_grid_settings.scss */
+.fd-grid-settings .dragger {
+  display: inline-block;
+  background-image: url(./images/icon_draggable.png);
+  background-position: center center;
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  border: 0px solid;
+  border-radius: 0px;
+  overflow: visible;
+  text-indent: -999em;
+  cursor: move;
+}
+/* line 30, ../../app/styles/directives/_grid_settings.scss */
+.fd-grid-settings .overflow {
+  height: 290px;
+  overflow: auto;
+}
+
+/**
+ Dropdown Widget
+**/
+/* line 5, ../../app/styles/directives/_dropdown.scss */
+.fd-dropdown {
+  display: inline-block;
+  line-height: 39px;
+}
+/* line 9, ../../app/styles/directives/_dropdown.scss */
+.fd-dropdown i {
+  font-size: 1.3em;
+}
+/* line 13, ../../app/styles/directives/_dropdown.scss */
+.fd-dropdown .btn-group > button.dropdown-toggle, .fd-dropdown .btn-group.open .dropdown-toggle {
+  background: url(./images/icob_dd_arrow_dark.png) right center no-repeat;
+  background-size: 20px 6px;
+  padding-right: 30px;
+}
+/* line 19, ../../app/styles/directives/_dropdown.scss */
+.fd-dropdown a {
+  cursor: pointer;
+}
+
+/* Remove default bootstrap 3d bevel */
+/* line 26, ../../app/styles/directives/_dropdown.scss */
+.btn-group.open .btn.dropdown-toggle {
+  background-color: inherit;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+/* line 33, ../../app/styles/directives/_dropdown.scss */
+.dropdown-menu {
+  top: 70%;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  padding: 0px;
+}
+/* line 39, ../../app/styles/directives/_dropdown.scss */
+.dropdown-menu h3 {
+  margin: 0px;
+  padding: 4px 20px;
+  font-size: 14px;
+}
+/* line 45, ../../app/styles/directives/_dropdown.scss */
+.dropdown-menu a.disabled {
+  color: #ddd;
+}
+/* line 47, ../../app/styles/directives/_dropdown.scss */
+.dropdown-menu a.disabled:hover {
+  background-color: inherit;
+  color: #ddd;
+}
+/* line 52, ../../app/styles/directives/_dropdown.scss */
+.dropdown-menu .divider {
+  border-bottom: 0px;
+}
+
+/* line 57, ../../app/styles/directives/_dropdown.scss */
+.dropdown-menu a.selected,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a {
+  background-image: none;
+  background-color: whitesmoke;
+  color: #262626;
+}
+
+/* line 1, ../../app/styles/directives/_card_switcher.scss */
+.fd-card-switcher {
+  display: inline-block;
+}
+
+/* line 1, ../../app/styles/directives/_search.scss */
+.find_container {
+  float: none;
+  margin-bottom: 5px;
+}
+
+/* line 7, ../../app/styles/directives/_search.scss */
+.find_container #filter_input {
+  float: left;
+  display: block;
+}
+
+/* line 12, ../../app/styles/directives/_search.scss */
+.find_container #find_input_container {
+  float: right;
+  display: block;
+  margin-left: 10px;
+  position: relative;
+}
+
+/* line 20, ../../app/styles/directives/_search.scss */
+.find_container #find_input_container input.search_input {
+  box-sizing: border-box;
+  border: 1px solid #e3e3e3;
+  border-top: 1px solid #BABABA;
+  padding: 7px 35px 8px 5px;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #FFFFFF;
+  -webkit-appearance: none;
+  float: left;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 35px;
+  width: 11em;
+}
+
+/* line 41, ../../app/styles/directives/_search.scss */
+.find_container #find_input_container .btn_find {
+  width: 30px;
+  height: 30px;
+  padding-left: 30px;
+  border: 0px solid;
+  border-radius: 0px;
+  overflow: visible;
+  -webkit-appearance: none;
+  margin: 0px;
+  padding: 0px 0px 0px 30px;
+  box-sizing: border-box;
+  right: 0px;
+  top: 0px;
+  background: transparent url(./images/icon_search.png) center center no-repeat;
+  background-size: 15px 15px;
+  text-indent: -999em;
+}
+
+/* Styling for the original dashboard library */
+/* line 2, ../../app/styles/directives/_dashboard.scss */
+.dashboard-widget-area {
+  margin: 10px 0 30px;
+  min-height: 200px;
+}
+
+/* line 7, ../../app/styles/directives/_dashboard.scss */
+.widget-container {
+  float: left;
+  display: inline-block;
+}
+
+/* line 13, ../../app/styles/directives/_dashboard.scss */
+.widget {
+  margin: 0 1em 1em 0 !important;
+  background-color: white;
+  position: relative;
+  height: 100%;
+}
+
+/* line 21, ../../app/styles/directives/_dashboard.scss */
+.widget-header {
+  overflow: hidden;
+}
+
+/* line 24, ../../app/styles/directives/_dashboard.scss */
+.widget-header .label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 28, ../../app/styles/directives/_dashboard.scss */
+.widget-header .glyphicon {
+  cursor: pointer;
+  float: right;
+  opacity: 0.5;
+  margin-left: 5px;
+}
+
+/* line 34, ../../app/styles/directives/_dashboard.scss */
+.widget-header .glyphicon:hover {
+  opacity: 1;
+}
+
+/* line 37, ../../app/styles/directives/_dashboard.scss */
+.widget-header .widget-title {
+  vertical-align: middle;
+}
+
+/* line 40, ../../app/styles/directives/_dashboard.scss */
+.widget-header form.widget-title {
+  display: inline;
+}
+
+/* line 44, ../../app/styles/directives/_dashboard.scss */
+.widget-header form.widget-title input.form-control {
+  width: auto;
+  display: inline-block;
+}
+
+/* line 49, ../../app/styles/directives/_dashboard.scss */
+.widget-content {
+  overflow: hidden;
+}
+
+/* line 53, ../../app/styles/directives/_dashboard.scss */
+.widget .widget-ew-resizer {
+  position: absolute;
+  width: 5px;
+  right: -2px;
+  height: 100%;
+  top: 0;
+  cursor: ew-resize;
+}
+
+/* line 62, ../../app/styles/directives/_dashboard.scss */
+.widget .widget-resizer-marquee {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* line 70, ../../app/styles/directives/_dashboard.scss */
+.remove-layout-icon {
+  vertical-align: text-top;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+/* line 75, ../../app/styles/directives/_dashboard.scss */
+.remove-layout-icon:hover {
+  opacity: 1;
+}
+
+/* line 78, ../../app/styles/directives/_dashboard.scss */
+.layout-title {
+  display: inline-block;
+}
+
+/*    */
+/* line 87, ../../app/styles/directives/_dashboard.scss */
+.dashboard-container .btn-toolbar {
+  display: none;
+}
+
+/* line 91, ../../app/styles/directives/_dashboard.scss */
+.panel-default > .panel-heading {
+  color: #333333;
+  background-color: #E7E7E7;
+  padding: 5px 0px 5px 10px;
+}
+
+/* line 97, ../../app/styles/directives/_dashboard.scss */
+.panel-default > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #dddddd;
+}
+
+/* line 100, ../../app/styles/directives/_dashboard.scss */
+.panel-default > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #dddddd;
+}
+
+/* line 104, ../../app/styles/directives/_dashboard.scss */
+.panel {
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* line 112, ../../app/styles/directives/_dashboard.scss */
+.dashboard-container .panel-body {
+  padding: 0px;
+  overflow: auto;
+  height: 295px !important;
+  position: relative;
+}
+
+/* line 118, ../../app/styles/directives/_dashboard.scss */
+.panel-body:before,
+.panel-body:after {
+  content: " ";
+  display: table;
+}
+
+/* line 123, ../../app/styles/directives/_dashboard.scss */
+.panel-body:after {
+  clear: both;
+}
+
+/* line 126, ../../app/styles/directives/_dashboard.scss */
+.panel-body:before,
+.panel-body:after {
+  content: " ";
+  display: table;
+}
+
+/* line 131, ../../app/styles/directives/_dashboard.scss */
+.panel-body:after {
+  clear: both;
+}
+
+/* line 135, ../../app/styles/directives/_dashboard.scss */
+.panel-heading {
+  padding: 6px 15px;
+}
+/* line 137, ../../app/styles/directives/_dashboard.scss */
+.panel-heading h3 {
+  margin: 0px;
+  line-height: 20px;
+  float: left;
+  padding: 1px;
+}
+
+/* line 145, ../../app/styles/directives/_dashboard.scss */
+.portlet_content {
+  padding: 15px;
+}
+
+/* FD customizations */
+/* line 151, ../../app/styles/directives/_dashboard.scss */
+.widget {
+  height: 325px;
+}
+
+/* line 155, ../../app/styles/directives/_dashboard.scss */
+.dash-header-form {
+  float: right;
+}
+/* line 158, ../../app/styles/directives/_dashboard.scss */
+.dash-header-form select {
+  border: 0px;
+  background-color: transparent;
+  width: inherit;
+  height: 21px;
+  line-height: 21px;
+  font-size: .9em;
+}
+
+/*  Last Updated row at the bottom */
+/* line 170, ../../app/styles/directives/_dashboard.scss */
+.last_updated {
+  bottom: 0;
+  color: #757575;
+  display: block;
+  font-size: 0.85em;
+  font-style: italic;
+  position: absolute;
+  text-align: center;
+  width: 95%;
+}
+
+/* Messages */
+/* line 2, ../../app/styles/directives/widgets/_messages.scss */
+.msg_date {
+  padding: 5px;
+}
+
+/* line 6, ../../app/styles/directives/widgets/_messages.scss */
+.msg_date h4 {
+  line-height: 15px;
+  font-weight: 0.85em;
+  text-transform: uppercase;
+}
+
+/* line 12, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list {
+  display: block;
+}
+
+/* line 19, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* line 23, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li:first-child {
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 27, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container {
+  position: relative;
+  display: block;
+  padding: 10px 0px;
+}
+
+/* line 33, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_priority {
+  font-size: 0.85em;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 20px 20px;
+  text-align: center;
+  line-height: 16px;
+  padding: 0px 0px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+  border-radius: 4px;
+  width: 16px;
+  text-indent: -999em;
+  background-position: center center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+
+/* line 53, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_priority.msg_fatal {
+  background-image: url(./images/icon_msg_fatal_x2.png);
+  background-image: url(./images/icon_msg_fatal.png) \9;
+}
+
+/* line 57, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_priority.msg_severe {
+  background-image: url(./images/icon_msg_severe_x2.png);
+  background-image: url(./images/icon_msg_severe.png) \9;
+}
+
+/* line 61, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_priority.msg_warning {
+  background-image: url(./images/icon_msg_warning_x2.png);
+  background-image: url(./images/icon_msg_warning.png) \9;
+}
+
+/* line 65, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_priority.msg_information {
+  background-image: url(./images/icon_msg_info_x2.png);
+  background-image: url(./images/icon_msg_info.png) \9;
+}
+
+/* line 70, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_details {
+  display: block;
+  clear: both;
+  margin-right: 80px;
+  margin-left: 25px;
+}
+
+/* line 77, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_details .msg_desc {
+  line-height: 15px;
+  display: block;
+}
+
+/* line 82, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_details .msg_action {
+  line-height: 15px;
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+  color: #999999;
+}
+
+/* line 91, ../../app/styles/directives/widgets/_messages.scss */
+ul.msg_list > li .msg_container .msg_date_time {
+  line-height: 15px;
+  display: block;
+  color: #999999;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+
+/* Profile */
+/* line 2, ../../app/styles/directives/widgets/_profile.scss */
+.profile_item.highlight {
+  width: 100%;
+  display: block;
+  font-size: 1.8em;
+}
+
+/* line 8, ../../app/styles/directives/widgets/_profile.scss */
+.profile_item {
+  float: left;
+  width: 50%;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* line 15, ../../app/styles/directives/widgets/_profile.scss */
+.profile_item.highlight .profile_label {
+  line-height: 100%;
+}
+
+/* line 19, ../../app/styles/directives/widgets/_profile.scss */
+.profile_item .profile_label {
+  display: block;
+  line-height: 120%;
+}
+
+/* line 24, ../../app/styles/directives/widgets/_profile.scss */
+.profile_item .profile_value {
+  display: block;
+  font-size: 1.2em;
+  line-height: 150%;
+}
+
+/* Recent Activity */
+/* line 2, ../../app/styles/directives/widgets/_recent_activity.scss */
+.tx_desc {
+  padding-right: 80px;
+  line-height: 15px;
+  display: block;
+}
+
+/* line 8, ../../app/styles/directives/widgets/_recent_activity.scss */
+.tx_amt {
+  position: absolute;
+  line-height: 15px;
+  right: 30px;
+  top: 10px;
+}
+
+/* line 15, ../../app/styles/directives/widgets/_recent_activity.scss */
+.tx_date {
+  display: block;
+  line-height: 15px;
+  color: #999999;
+  font-size: 0.85em;
+}
+
+/* Generic List */
+/* line 25, ../../app/styles/directives/widgets/_recent_activity.scss */
+ul.generic_list {
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 29, ../../app/styles/directives/widgets/_recent_activity.scss */
+ul.generic_list > li {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* line 33, ../../app/styles/directives/widgets/_recent_activity.scss */
+ul.generic_list > li > a {
+  display: block;
+  padding: 4px 20px 4px 5px;
+  background: url(../images/icon_launch_arrow.png) right center no-repeat;
+  background-size: 20px 20px;
+  color: inherit;
+  position: relative;
+}
+
+/* line 42, ../../app/styles/directives/widgets/_recent_activity.scss */
+ul.generic_list > li > a:hover {
+  background-color: #efefef;
+  text-decoration: none;
+}
+
+/* Generic List Icons */
+/* line 49, ../../app/styles/directives/widgets/_recent_activity.scss */
+ul.generic_list.statement > li > a .statement_period {
+  padding-left: 30px;
+  line-height: 20px;
+  background: url(../images/icon_statement.png) left center no-repeat;
+  background-size: 20px 20px;
+}
+
+/* Transaction Summary */
+/* line 2, ../../app/styles/directives/widgets/_mcc_summary.scss */
+.summary_heading {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 8, ../../app/styles/directives/widgets/_mcc_summary.scss */
+.summary_heading #summary_title {
+  float: left;
+  width: 50%;
+  line-height: 20px;
+}
+
+/* line 14, ../../app/styles/directives/widgets/_mcc_summary.scss */
+.summary_heading #summary_value {
+  float: left;
+  width: 50%;
+  line-height: 20px;
+  text-align: right;
+}
+
+/* line 24, ../../app/styles/directives/widgets/_mcc_summary.scss */
+ul.trans_summary > li.trans_item {
+  position: relative;
+  margin-top: 5px;
+}
+
+/* line 29, ../../app/styles/directives/widgets/_mcc_summary.scss */
+ul.trans_summary > li.trans_item .trans_code {
+  line-height: 15px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-weight: bold;
+}
+
+/* line 37, ../../app/styles/directives/widgets/_mcc_summary.scss */
+ul.trans_summary > li.trans_item .trans_desc {
+  margin-left: 50px;
+  position: relative;
+  display: block;
+  line-height: 15px;
+}
+
+/* line 44, ../../app/styles/directives/widgets/_mcc_summary.scss */
+ul.trans_summary > li.trans_item .trans_bar_container {
+  position: relative;
+  margin-left: 50px;
+  display: block;
+  margin-right: 50px;
+  background-color: #efefef;
+  height: 9px;
+  margin-top: 0px;
+}
+
+/* line 54, ../../app/styles/directives/widgets/_mcc_summary.scss */
+ul.trans_summary > li.trans_item .trans_bar_container .trans_bar {
+  height: 9px;
+  display: block;
+  margin: 3px 0px;
+  transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+}
+
+/* line 66, ../../app/styles/directives/widgets/_mcc_summary.scss */
+ul.trans_summary > li.trans_item .trans_bar_container .trans_bar_value {
+  display: block;
+  line-height: 15px;
+  position: absolute;
+  right: -50px;
+  top: -3px;
+  text-align: right;
+  width: 50px;
+}
+
+/* Outputs Container */
+/* line 2, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list {
+  display: block;
+}
+
+/* line 6, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* line 10, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li:first-child {
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 14, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li a.output_container {
+  color: inherit;
+  text-decoration: none;
+  padding: 5px 0px;
+  padding-right: 20px;
+  background: url(../images/icon_launch_arrow.png) right center no-repeat;
+  background-size: 20px 20px;
+}
+
+/* line 23, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li a:hover {
+  background-color: #efefef;
+}
+
+/* line 27, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container {
+  position: relative;
+  display: block;
+  padding: 5px 0px;
+}
+
+/* line 33, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container .output_icon {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: 24px 24px;
+}
+
+/* line 44, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_excel.output_new .output_icon {
+  background-image: url(./images/icon_output_excel_unread.png);
+}
+
+/* line 45, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_quickbooks.output_new .output_icon {
+  background-image: url(./images/icon_output_quickbooks_unread.png);
+}
+
+/* line 46, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_quicken.output_new .output_icon {
+  background-image: url(./images/icon_output_quicken_unread.png);
+}
+
+/* line 47, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_pdf.output_new .output_icon {
+  background-image: url(./images/icon_output_pdf_unread.png);
+}
+
+/* line 49, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_excel .output_icon {
+  background-image: url(./images/icon_output_excel_read.png);
+}
+
+/* line 50, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_quickbooks .output_icon {
+  background-image: url(./images/icon_output_quickbooks_read.png);
+}
+
+/* line 51, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_quicken .output_icon {
+  background-image: url(./images/icon_output_quicken_read.png);
+}
+
+/* line 52, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container.output_pdf .output_icon {
+  background-image: url(./images/icon_output_pdf_read.png);
+}
+
+/* line 54, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container .output_details {
+  margin-left: 40px;
+  display: block;
+}
+
+/* line 59, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container .output_details .output_title {
+  line-height: 20px;
+  display: block;
+}
+
+/* line 64, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container .output_details .output_info {
+  line-height: 14px;
+  display: block;
+  color: #999999;
+  padding: 3px 0px;
+}
+
+/* line 72, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container .output_details .output_info .info_item {
+  float: left;
+  display: block;
+  margin-right: 10px;
+  border-right: 1px solid #CCCCCC;
+  padding-right: 10px;
+}
+
+/* line 81, ../../app/styles/directives/widgets/_outputs.scss */
+ul.output_list > li .output_container .output_details .output_info .info_item.status {
+  color: #454545;
+  border-right: 0px;
+}
+
+/* line 1, ../../app/styles/directives/_charts.scss */
+.chart-container {
+  float: left;
+  overflow: auto;
+  padding: 5px;
+}
+
+/* Charts */
+/* line 9, ../../app/styles/directives/_charts.scss */
+.bar-chart-container {
+  width: 12em;
+}
+
+/* line 14, ../../app/styles/directives/_charts.scss */
+.chart_legend {
+  position: absolute;
+  left: 260px;
+  z-index: 1;
+}
+
+/* line 20, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 25, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li {
+  line-height: 20px;
+  font-size: 0.85em;
+}
+
+/* line 30, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li .legend_icon {
+  height: 10px;
+  width: 10px;
+  border-radius: 2px;
+  float: left;
+  display: block;
+  margin: 5px 5px 5px 0px;
+}
+
+/* line 39, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li.legend_new .legend_icon {
+  background-color: #E95A20;
+}
+
+/* line 40, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li.legend_reviewed .legend_icon {
+  background-color: #EB9842;
+}
+
+/* line 41, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li.legend_approvate .legend_icon {
+  background-color: #003B54;
+}
+
+/* line 42, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li.legend_exported .legend_icon {
+  background-color: #008AA9;
+}
+
+/* line 44, ../../app/styles/directives/_charts.scss */
+.chart_legend > ul > li .legend_label {
+  margin-top: 15px;
+  display: block;
+}
+
+/* line 49, ../../app/styles/directives/_charts.scss */
+.chart_legend h4 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* line 54, ../../app/styles/directives/_charts.scss */
+.chart_container {
+  position: relative;
+}
+
+/* line 58, ../../app/styles/directives/_charts.scss */
+.chart_count {
+  height: 120px;
+  width: 120px;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -60px;
+  top: 50%;
+  margin-top: -60px;
+  font-size: 2.0em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  position: absolute;
+  line-height: 120px;
+}
+
+/* Render the table off-screen, accessible for screen readers. */
+/* line 75, ../../app/styles/directives/_charts.scss */
+.accessible-chart-table {
+  position: absolute;
+  left: -999px;
+  top: 0px;
+  overflow: hidden;
+}
+
+/** Tooltips **/
+/* line 84, ../../app/styles/directives/_charts.scss */
+.dijitTooltip .dijitTooltipContents {
+  padding-right: 15px;
+}
+
+/* line 88, ../../app/styles/directives/_charts.scss */
+.dijitTooltipRight .dijitTooltipContents, .dijitTooltipLeft .dijitTooltipContents {
+  padding-right: 20px;
+}
+
+/* line 1, ../../app/styles/directives/_validation.scss */
+.error-message {
+  display: inline-block;
+  background-color: #AA0F1F;
+  color: #FFF;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+/* line 5, ../../app/styles/directives/_infobox.scss */
+.info-box-group {
+  float: left;
+  padding-right: 20px;
+}
+
+/* line 9, ../../app/styles/directives/_infobox.scss */
+.info-box-group .info-box-heading {
+  padding: 10px;
+}
+
+/* line 12, ../../app/styles/directives/_infobox.scss */
+.info-box-group .info-box {
+  padding: 10px 0px 10px 0px;
+}
+
+/* line 1, ../../app/styles/directives/_generic_fields.scss */
+.fd-number-field {
+  display: inline-block;
+  width: 100%;
+}
+/* line 4, ../../app/styles/directives/_generic_fields.scss */
+.fd-number-field input[type=number] {
+  -moz-appearance: textfield;
+}
+/* line 7, ../../app/styles/directives/_generic_fields.scss */
+.fd-number-field input[type=number]::-webkit-inner-spin-button,
+.fd-number-field input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 14, ../../app/styles/directives/_generic_fields.scss */
+.full-name-field {
+  margin-top: 1em;
+}
+
+/* line 2, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction {
+  /* Assign Icon to Split or Line Item */
+}
+/* line 3, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .line-items-table, .split-transaction .split-table {
+  border-bottom: 1px solid #DFDFDF;
+  border-left: 1px solid #DFDFDF;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+/* line 9, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .line-items-table thead, .split-transaction .split-table thead {
+  background: #efefef;
+}
+/* line 13, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .line-items-table th, .split-transaction .split-table th {
+  padding: 2px 8px;
+  border-right: 1px solid #DFDFDF;
+}
+/* line 17, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .line-items-table td, .split-transaction .split-table td {
+  vertical-align: top;
+  padding: 3px 8px;
+  border-right: 1px solid #DFDFDF;
+}
+/* line 24, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .icon_split_type {
+  background-color: transparent;
+  background: url(./images/sprite_line_items.png);
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+  border: 0px;
+  padding-left: 20px !important;
+  border-radius: 0px;
+  webkit-appearance: none;
+  line-height: 20px;
+  height: 15px;
+  display: inline-block;
+}
+/* line 38, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .icon_split_type.above {
+  background-position: 0px -11px;
+}
+/* line 42, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .icon_split_type.below {
+  background-position: 0px 2px;
+}
+/* line 46, ../../app/styles/directives/_split_transaction.scss */
+.split-transaction .icon_split_type.remove {
+  background-position: 0px -24px;
+}
+
+/* Dropdown Custom Panel */
+/* line 3, ../../app/styles/directives/_dropdown_panel.scss */
+.fd-dropdown-panel {
+  position: relative;
+}
+
+/* line 7, ../../app/styles/directives/_dropdown_panel.scss */
+.dd_option_panel {
+  position: absolute;
+  top: 34px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  color: #454545;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 300px;
+  min-width: 200px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* line 24, ../../app/styles/directives/_dropdown_panel.scss */
+.dd_option_panel .dd_close_panel a {
+  height: 20px;
+  width: 20px;
+  background: url(./images/icon_dd_close_btn.png) center center no-repeat;
+  background-size: 10px 10px;
+  text-indent: -999em;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  outline: none;
+  text-align: left;
+}
+
+/* line 1, ../../app/styles/directives/_spinner.scss */
+.spinner {
+  background: url(./images/loader_30px.gif) rgba(255, 255, 255, 0.93);
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 100;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+/* line 13, ../../app/styles/directives/_spinner.scss */
+.spinner-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 3, ../../app/styles/directives/_change_username.scss */
+.change-username .success {
+  background: url(./images/icon_status_complete.png) 0px 0px no-repeat;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  background-size: contain;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+/* line 13, ../../app/styles/directives/_change_username.scss */
+.change-username .suggestions {
+  margin-left: 35%;
+  display: block;
+}
+/* line 18, ../../app/styles/directives/_change_username.scss */
+.change-username .suggestions span {
+  color: #999;
+}
+/* line 27, ../../app/styles/directives/_change_username.scss */
+.change-username .change-username-validity {
+  position: absolute;
+}
+/* line 32, ../../app/styles/directives/_change_username.scss */
+.change-username .form_row .form_input li {
+  display: block;
+}
+/* line 36, ../../app/styles/directives/_change_username.scss */
+.change-username .form_req {
+  clear: both;
+  padding: 10px 0px;
+}
+/* line 41, ../../app/styles/directives/_change_username.scss */
+.change-username .form_req > ul {
+  margin-left: 35%;
+}
+/* line 45, ../../app/styles/directives/_change_username.scss */
+.change-username .form_req > ul > li {
+  padding-left: 25px;
+  display: block;
+  line-height: 20px;
+  display: block;
+  color: #999999;
+  background-size: 20px 20px;
+}
+/* line 54, ../../app/styles/directives/_change_username.scss */
+.change-username .form_req > ul > li.required {
+  background: url(./images/icon_status_required_x2.png) 0px 0px no-repeat;
+  background: url(./images/icon_status_required.png) 0px 0px no-repeat\9;
+  background-size: 20px 20px;
+}
+/* line 60, ../../app/styles/directives/_change_username.scss */
+.change-username .form_req > ul > li.complete {
+  background: url(./images/icon_status_complete_x2.png) 0px 0px no-repeat;
+  background: url(./images/icon_status_complete.png) 0px 0px no-repeat\9;
+  color: #454545;
+  background-size: 20px 20px;
+}
+/* line 67, ../../app/styles/directives/_change_username.scss */
+.change-username .form_req > ul > li.incomplete {
+  background: url(./images/icon_status_incomplete_x2.png) 0px 0px no-repeat;
+  background: url(./images/icon_status_incomplete.png) 0px 0px no-repeat\9;
+  color: #CC5252;
+  background-size: 20px 20px;
+}
+/* line 75, ../../app/styles/directives/_change_username.scss */
+.change-username .pm_template_text .form_req {
+  float: right;
+}
+
+/* line 80, ../../app/styles/directives/_change_username.scss */
+.field_loader {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 30px;
+  width: 40px;
+  background: url(./images/loader_x2.gif) center center no-repeat;
+  background: url(./images/loader.gif) center center no-repeat\9;
+  background-size: 20px 20px;
+}
+
+/* line 94, ../../app/styles/directives/_change_username.scss */
+.req_label {
+  color: #999;
+  line-height: 20px;
+  float: left;
+  width: 35%;
+}
+
+/* line 101, ../../app/styles/directives/_change_username.scss */
+#username_suggest {
+  margin-top: 12px;
+}
+
+/* line 1, ../../app/styles/directives/_cards.scss */
+.card_container .page_title {
+  float: none;
+}
+
+/* line 2, ../../app/styles/directives/_panel_actions.scss */
+.drawer_panel_actions button {
+  float: right;
+  min-width: 10em;
+  transition: all .2s ease;
+}
+/* line 8, ../../app/styles/directives/_panel_actions.scss */
+.drawer_panel_actions .btn_icon.on {
+  background-color: #ddd;
+  color: #666;
+  border-color: #ccc;
+  background-image: url(./images/icon_sprite_dark.png);
+}
+
+/* line 1, ../../app/styles/directives/_email_panel.scss */
+.email_response {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 1, ../../app/styles/directives/_tax_chooser.scss */
+.tax_drawer_panel {
+  background-color: #f3f3f3;
+}
+
+/* line 7, ../../app/styles/directives/_tax_chooser.scss */
+label.tax_drawer_toggle {
+  cursor: pointer;
+  color: #454545;
+  text-decoration: none;
+  background-image: url(./images/icon_transaction_toggle_x2.png);
+  background-image: url(./images/icon_transaction_toggle.png) \9;
+  /* do this for IE browser less than 9 */
+  background-position: right 0px;
+  background-repeat: no-repeat;
+  background-size: 20px 40px;
+  padding-right: 20px;
+  display: block;
+  float: left;
+}
+
+/* line 22, ../../app/styles/directives/_tax_chooser.scss */
+.tax_drawer_toggle.isOpen, .drawer_toggle_icon.isOpen {
+  background-position: right -20px;
+}
+
+/* line 1, ../../app/styles/directives/_cac_chooser.scss */
+.form_row .form_input input.cac-option-filter {
+  width: 70%;
+}
+
+/* line 5, ../../app/styles/directives/_cac_chooser.scss */
+.type_ahead_results {
+  margin-top: 10px;
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 10, ../../app/styles/directives/_cac_chooser.scss */
+.type_ahead_results li button {
+  padding: 10px;
+  display: block;
+  border-bottom: 1px solid #e3e3e3;
+  color: #222;
+  width: 100%;
+  text-align: left;
+}
+
+/* line 20, ../../app/styles/directives/_cac_chooser.scss */
+.cac-option-dialog .warning {
+  padding: 10px;
+  color: #0B990B;
+}
+
+/* line 25, ../../app/styles/directives/_cac_chooser.scss */
+.cac-form-row {
+  position: relative;
+}
+
+/* line 29, ../../app/styles/directives/_cac_chooser.scss */
+.cac-show-more-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 24px;
+}
+
+/* line 1, ../../app/styles/directives/_output.scss */
+.fd_form legend, label, select, input[type="text"] {
+  font-size: inherit;
+}
+
+/* line 5, ../../app/styles/directives/_output.scss */
+.help_text {
+  display: block;
+  clear: both;
+  color: #757575;
+}
+
+/* line 1, ../../app/styles/directives/_receipt.scss */
+.receipt_panel {
+  padding: 10px;
+  clear: both;
+  display: block;
+}
+
+/* line 7, ../../app/styles/directives/_receipt.scss */
+.receipt {
+  border: 1px solid;
+  border-color: white;
+}
+
+/* line 12, ../../app/styles/directives/_receipt.scss */
+.receipt_img {
+  padding-right: 10px;
+}
+
+/* line 16, ../../app/styles/directives/_receipt.scss */
+.receipt-message {
+  display: block;
+  color: red;
+  padding-left: 10px;
+}
+
+/* line 22, ../../app/styles/directives/_receipt.scss */
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 27, ../../app/styles/directives/_receipt.scss */
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* line 39, ../../app/styles/directives/_receipt.scss */
+.upload-preview {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+/* line 1, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters {
+  margin-bottom: 0px;
+}
+
+/* line 5, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul {
+  float: left;
+  display: block;
+  margin: 0px;
+  padding: 0px 0px 0px 30px;
+  background: url(./images/icon_filter_dark_x2.png) 0px 7px no-repeat;
+  background-size: 16px 16px;
+}
+
+/* line 14, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul li {
+  float: left;
+  display: block;
+  margin: 0px 10px 10px 0px;
+}
+
+/* line 20, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul li .filter_item {
+  float: left;
+  display: block;
+  padding: 0px 10px;
+}
+
+/* line 26, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul li .filter_item .filter_label {
+  line-height: 30px;
+  float: left;
+  display: block;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* line 34, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul li .filter_item .filter_op {
+  line-height: 30px;
+  float: left;
+  padding: 0px 5px;
+  font-style: italic;
+}
+
+/* line 41, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul li .filter_item .filter_value {
+  line-height: 30px;
+  float: left;
+  display: block;
+  font-weight: bold;
+}
+
+/* line 48, ../../app/styles/directives/_grid_filter_bar.scss */
+#applied_filters ul li .filter_item .remove_filter_btn {
+  float: right;
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin: 0px;
+  padding: 0px;
+  text-indent: -999em;
+  border: 0px;
+  border-radius: 0px;
+  background: transparent url(./images/icon_dd_close_btn_x2.png) center center no-repeat;
+  background-size: 10px 10px;
+  text-align: left;
+}
+
+/* line 1, ../../app/styles/directives/_expando.scss */
+.expando {
+  position: absolute;
+  width: 30%;
+  background: white;
+  top: 0px;
+  bottom: 0px;
+  right: -30%;
+  padding: 1em 1em;
+  box-shadow: -5px 2px 8px #dddddd;
+  -webkit-transition: all .5s ease;
+}
+
+/* line 351, ../../app/styles/_content.scss */
+/* line 16, ../../app/styles/directives/_expando.scss */
+.expando-tab {
+  margin-left: -35px;
+  background: #52a7ef;
+  padding: 7px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  border: 0px;
+  height: 30px;
+  width: 30px;
+  float: left;
+  text-indent: -999em;
+  background-image: url(images/icon_toggle_switch.png) !important;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  background-size: 30px 60px;
+  -webkit-appearance: none;
+  border-radius: 0px;
+}
+
+/* line 38, ../../app/styles/directives/_expando.scss */
+.grid_panel_inner {
+  overflow: auto;
+  height: 100%;
+  padding-right: 7px;
+}
+
+/* line 1, ../../app/styles/directives/_accordion.scss */
+.accordion {
+  float: left;
+  width: 100%;
+}
+/* line 5, ../../app/styles/directives/_accordion.scss */
+.accordion .accordion-element {
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 10, ../../app/styles/directives/_accordion.scss */
+.accordion .accordion-element .accordion-panel {
+  display: block;
+  background-color: #F3F3F3;
+  padding: 10px;
+  line-height: 15px;
+  font-size: 1em;
+  text-decoration: none;
+  background-image: url("images/icon_drawers_arrow_blue_x2.png");
+  background-position: right -35px;
+  background-repeat: no-repeat;
+  background-size: 35px 70px;
+  cursor: pointer;
+  font-weight: normal;
+  color: #008EC7;
+}
+/* line 24, ../../app/styles/directives/_accordion.scss */
+.accordion .accordion-element .accordion-panel.open {
+  background-position: right -1px;
+}
+/* line 28, ../../app/styles/directives/_accordion.scss */
+.accordion .accordion-element .accordion-panel h4 {
+  font-size: 1.0em;
+}
+/* line 33, ../../app/styles/directives/_accordion.scss */
+.accordion .accordion-element .accordion-body {
+  padding: 0 0 0 0;
+  margin: 10px 0 0 0;
+}
+
+/* line 1, ../../app/styles/directives/_button_dropdown.scss */
+.button_dropdown {
+  margin-right: 10px;
+  position: relative;
+}
+/* line 5, ../../app/styles/directives/_button_dropdown.scss */
+.button_dropdown .dd_option_panel {
+  display: block !important;
+}
+
+/* line 3, ../../app/styles/directives/_billing_account.scss */
+.billing_account input {
+  margin-left: 0px;
+}
+/* line 7, ../../app/styles/directives/_billing_account.scss */
+.billing_account .billing_options {
+  width: 100%;
+}
+/* line 10, ../../app/styles/directives/_billing_account.scss */
+.billing_account .billing_options ul {
+  width: 100% !important;
+}
+/* line 15, ../../app/styles/directives/_billing_account.scss */
+.billing_account .billing_option_label .form_label label {
+  margin-left: 0px !important;
+}
+
+/* Message Panel */
+/* line 2, ../../app/styles/directives/_messages.scss */
+#error_message .dijitDialogTitleBar {
+  background-image: none;
+  background-color: #C64E4E !important;
+  border: 1px solid #C64E4e;
+}
+
+/* line 8, ../../app/styles/directives/_messages.scss */
+#error_message .dijitDialogTitle {
+  color: white;
+}
+
+/* line 12, ../../app/styles/directives/_messages.scss */
+#warning_message .dijitDialogTitleBar {
+  background-image: none;
+  background-color: #C64E4E !important;
+  border: 1px solid #C64E4e;
+}
+
+/* line 18, ../../app/styles/directives/_messages.scss */
+#warning_message .dijitDialogTitle, .dialog_success .dijitDialogTitle {
+  color: white;
+}
+
+/* line 22, ../../app/styles/directives/_messages.scss */
+#success_message .dijitDialogTitleBar, .dialog_success .dijitDialogTitleBar {
+  background-image: none;
+  background-color: #499945 !important;
+  border: 1px solid #499945;
+}
+
+/* line 28, ../../app/styles/directives/_messages.scss */
+#success_message .dijitDialogTitle, .dialog_success .dijitDialogTitle {
+  color: white;
+}
+
+/* line 32, ../../app/styles/directives/_messages.scss */
+#success_message_ok .dijitDialogTitleBar {
+  background-image: none;
+  background-color: #499945 !important;
+  border: 1px solid #499945;
+}
+
+/* line 38, ../../app/styles/directives/_messages.scss */
+#success_message_ok .dijitDialogTitle {
+  color: white;
+}
+
+/* line 42, ../../app/styles/directives/_messages.scss */
+.dialog_success .dijitDialogTitle {
+  background-image: url("./images/icon_message_success_x2.png");
+  background-position: 0px 15px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  padding: 20px 0px 20px 50px;
+  color: #FFF;
+}
+
+/* line 1, ../../app/styles/directives/_tabs.scss */
+.tabs {
+  /*Dunno why 1em is not enough*/
+}
+/* line 2, ../../app/styles/directives/_tabs.scss */
+.tabs .tabpanel {
+  float: left;
+  width: 100%;
+}
+/* line 8, ../../app/styles/directives/_tabs.scss */
+.tabs .tab {
+  height: 3em !important;
+}
+/* line 12, ../../app/styles/directives/_tabs.scss */
+.tabs .tab.tabToggleDisabled {
+  cursor: default;
+}
+/* line 16, ../../app/styles/directives/_tabs.scss */
+.tabs .tab.disabled {
+  background-color: #AEAEAE;
+  cursor: auto;
+}
+/* line 21, ../../app/styles/directives/_tabs.scss */
+.tabs .tab.tabToggleDisabled.active {
+  background-color: white;
+}
+
+/* line 1, ../../app/styles/directives/_tree.scss */
+.fd-tree {
+  margin: 5px;
+  font-size: 14px;
+  min-height: 600px;
+}
+/* line 5, ../../app/styles/directives/_tree.scss */
+.fd-tree ul {
+  padding-left: 20px;
+}
+/* line 6, ../../app/styles/directives/_tree.scss */
+.fd-tree li {
+  list-style-type: none;
+  outline: none;
+  padding: 7px 5px;
+}
+/* line 7, ../../app/styles/directives/_tree.scss */
+.fd-tree li ul {
+  margin-top: 5px;
+}
+/* line 8, ../../app/styles/directives/_tree.scss */
+.fd-tree .visually-hidden {
+  position: absolute;
+  left: -999em;
+}
+/* line 9, ../../app/styles/directives/_tree.scss */
+.fd-tree .hasChildren {
+  position: relative;
+  font-weight: bold;
+}
+/* line 10, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree li ul {
+  display: none;
+}
+/* line 11, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree a {
+  padding: 3px 5px 3px 9px;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 16, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree a.focussed, .fd-tree .activedescendant > a {
+  background-color: #e3e3e3 !important;
+  outline: 1px dotted !important;
+}
+/* line 20, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree a.selected {
+  background-color: #99CCFF !important;
+}
+/* line 23, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree .childSelected {
+  background-color: #eee;
+}
+/* line 26, ../../app/styles/directives/_tree.scss */
+.fd-tree.multiselect .tree a.selected {
+  background-color: inherit;
+}
+/* line 29, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree li li a {
+  background-image: url("img/raquo-blue.png");
+  background-repeat: no-repeat;
+  background-position: 8px 0.5em;
+  padding: 5px 10px;
+}
+/* line 35, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree .hasChildren a {
+  background-image: none;
+  padding-left: 9px;
+}
+/* line 36, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree li.noChildren {
+  padding-left: 10px;
+}
+/* line 37, ../../app/styles/directives/_tree.scss */
+.fd-tree .toggle {
+  background-position: left top;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+/* line 38, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree .toggle.expanded {
+  background-image: url("images/tree/latest/expanded.gif");
+}
+/* line 39, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree .toggle.collapsed {
+  background-image: url("images/tree/latest/contracted.gif");
+}
+/* line 40, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree .toggle.expanded.hover {
+  background-image: url("images/tree-minus.png");
+}
+/* line 41, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree .toggle.collapsed.hover {
+  background-image: url("images/tree-plus.png");
+}
+/* line 43, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-node-label {
+  color: #333;
+}
+/* line 47, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-node-icon, .fd-tree .tree-checked-icon {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 4px;
+}
+/* line 58, ../../app/styles/directives/_tree.scss */
+.fd-tree .expanded > a > .tree-node-icon {
+  background-image: url("images/tree/latest/folder_open.png");
+  background-position-y: 4px;
+  width: 17px;
+}
+/* line 64, ../../app/styles/directives/_tree.scss */
+.fd-tree a > .tree-node-icon {
+  background-image: url("images/tree/latest/folder_closed.png");
+  background-position-y: 3px;
+}
+/* line 69, ../../app/styles/directives/_tree.scss */
+.fd-tree .noChildren > a > .tree-node-icon {
+  display: none;
+}
+/* line 75, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-checked-icon {
+  display: none;
+  background-position: 2px 2px;
+}
+/* line 80, ../../app/styles/directives/_tree.scss */
+.fd-tree.multiselect .tree-checked-icon {
+  display: inline-block;
+}
+/* line 84, ../../app/styles/directives/_tree.scss */
+.fd-tree a .tree-checked-icon {
+  background-image: url("images/tree-unchecked.png");
+}
+/* line 88, ../../app/styles/directives/_tree.scss */
+.fd-tree a.selected .tree-checked-icon {
+  background-image: url("images/tree-checked.png");
+  background-position: 1px 3px;
+  width: 19px;
+}
+/* line 94, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-max-exceeded {
+  color: rgba(185, 40, 40, 0.76);
+  font-style: italic;
+  font-size: 13px;
+}
+/* line 100, ../../app/styles/directives/_tree.scss */
+.fd-tree .viewpoint-expired {
+  color: #999;
+}
+/* line 105, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-user {
+  background-image: url(images/tree/latest/tree_user.png);
+  margin-right: 8px;
+  vertical-align: top;
+}
+/* line 111, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-card {
+  background-image: url(images/tree/latest/tree_card.png);
+  margin-right: 8px;
+  vertical-align: top;
+}
+/* line 117, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-bca {
+  background-image: url(images/tree/latest/tree_account.png);
+  margin-right: 8px;
+  background-position-y: 2px;
+  vertical-align: top;
+}
+/* line 124, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-cardholder {
+  background-image: url(images/tree/latest/tree_cardholder.png);
+  margin-right: 8px;
+  background-position-y: 2px;
+  vertical-align: top;
+}
+/* line 131, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-transaction_approver {
+  background-image: url(images/tree/latest/tree_user_transaction_approver.png);
+  margin-right: 8px;
+  background-position-y: 2px;
+  vertical-align: top;
+}
+/* line 138, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-expense_approver {
+  background-image: url(images/tree/latest/tree_user_expense_approver.png);
+  margin-right: 8px;
+  background-position-y: 2px;
+  vertical-align: top;
+}
+/* line 145, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-icon-card_approver {
+  background-image: url(images/tree/latest/tree_user_card_approver.png);
+  margin-right: 8px;
+  background-position-y: 2px;
+  vertical-align: top;
+}
+/* line 152, ../../app/styles/directives/_tree.scss */
+.fd-tree .tree-radio {
+  margin: 0px;
+  text-decoration: none;
+  vertical-align: text-top;
+}
+/* line 159, ../../app/styles/directives/_tree.scss */
+.fd-tree ul.tree li {
+  padding-left: 26px;
+}
+
+/* line 1, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint {
+  background-color: white;
+}
+/* line 4, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint .tree_controls {
+  float: right;
+}
+/* line 7, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint .tree_controls button {
+  width: 30px;
+  height: 30px;
+  background-position-x: 6px;
+  background-position-y: 6px;
+}
+/* line 12, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint .tree_controls button.active {
+  background-color: white;
+}
+/* line 17, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint .btn_tree_user {
+  background-image: url(./images/tree/latest/tree_user.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 23, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint .btn_tree_card {
+  background-image: url(./images/tree/latest/tree_card.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 29, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint .btn_tree_bca {
+  background-image: url(./images/tree/latest/tree_account.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* line 35, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults {
+  display: inline-block;
+  padding: 0px;
+  margin-top: -1px;
+  width: 100%;
+  position: absolute;
+}
+/* line 43, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+/* line 49, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li a {
+  display: block;
+  width: auto;
+  padding: 5px;
+  line-height: 15px;
+  cursor: pointer;
+  position: relative;
+}
+/* line 58, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li button span.listIcon {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+/* line 64, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li button span.listIcon img {
+  vertical-align: bottom;
+  margin-right: 5px;
+}
+/* line 69, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li button span.listName {
+  margin-left: 20px;
+}
+/* line 73, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li button span.listPath {
+  display: block;
+  color: #666666;
+  font-style: italic;
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+/* line 81, ../../app/styles/directives/_viewpoint.scss */
+.viewpoint #searchResults li a:focus,
+.viewpoint #searchResults li a:hover {
+  background-color: #c7eafb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 90, ../../app/styles/directives/_viewpoint.scss */
+.search-results-toggle {
+  background: url(./images/icob_dd_arrow_dark.png) right center no-repeat;
+  background-size: 20px 6px;
+  padding-right: 30px;
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  display: block;
+}
+
+/* line 100, ../../app/styles/directives/_viewpoint.scss */
+.find_container .viewpoint-search-container {
+  width: 30em;
+}
+/* line 102, ../../app/styles/directives/_viewpoint.scss */
+.find_container .viewpoint-search-container input.search_input {
+  width: 17em !important;
+}
+
+/* line 107, ../../app/styles/directives/_viewpoint.scss */
+.tree_container {
+  position: relative !important;
+}
+
+/* line 2, ../../app/styles/directives/_cag_selector.scss */
+.filter_inline .cag-selector .form_select, .filter_inline .rag-selector .form_select, .filter_inline .user-viewpoint .form_select, .filter_inline .user-selector .form_select {
+  width: 60% !important;
+  float: left !important;
+}
+/* line 7, ../../app/styles/directives/_cag_selector.scss */
+.filter_inline .cag-selector fd-cag-popup, .filter_inline .cag-selector fd-rag-popup, .filter_inline .cag-selector fd-user-viewpoint, .filter_inline .cag-selector fd-user-selector, .filter_inline .rag-selector fd-cag-popup, .filter_inline .rag-selector fd-rag-popup, .filter_inline .rag-selector fd-user-viewpoint, .filter_inline .rag-selector fd-user-selector, .filter_inline .user-viewpoint fd-cag-popup, .filter_inline .user-viewpoint fd-rag-popup, .filter_inline .user-viewpoint fd-user-viewpoint, .filter_inline .user-viewpoint fd-user-selector, .filter_inline .user-selector fd-cag-popup, .filter_inline .user-selector fd-rag-popup, .filter_inline .user-selector fd-user-viewpoint, .filter_inline .user-selector fd-user-selector {
+  float: left;
+}
+
+/* line 13, ../../app/styles/directives/_cag_selector.scss */
+.fd-cag-search-dialog, .fd-rag-search-dialog, .user-viewpoint-button {
+  float: right;
+}
+
+/* line 2, ../../app/styles/directives/_cac_selector.scss */
+.fd_form .form_container .form_row.inline.filter_inline .cac-selector li {
+  float: left;
+  width: 45% !important;
+  padding-right: 5px;
+}
+/* line 6, ../../app/styles/directives/_cac_selector.scss */
+.fd_form .form_container .form_row.inline.filter_inline .cac-selector li .form_label {
+  width: 100% !important;
+  text-align: left;
+}
+/* line 10, ../../app/styles/directives/_cac_selector.scss */
+.fd_form .form_container .form_row.inline.filter_inline .cac-selector li .form_select {
+  width: 100% !important;
+}
+
+/* line 16, ../../app/styles/directives/_cac_selector.scss */
+.cac-search-dialog {
+  #find_input_container-width: 100%;
+}
+/* line 21, ../../app/styles/directives/_cac_selector.scss */
+.cac-search-dialog .cac-status-field {
+  float: left;
+}
+/* line 25, ../../app/styles/directives/_cac_selector.scss */
+.cac-search-dialog .cac-search-field {
+  float: right;
+}
+
+/* line 2, ../../app/styles/directives/_card_level_selector.scss */
+.card-level-selector .card-level-selector-text {
+  width: 90%;
+  float: left;
+}
+
+/* line 8, ../../app/styles/directives/_card_level_selector.scss */
+.card-level-popup {
+  float: right;
+}
+
+/* line 2, ../../app/styles/directives/_send_password_dialog.scss */
+.send-password-dialog ul {
+  margin-bottom: 20px;
+}
+/* line 5, ../../app/styles/directives/_send_password_dialog.scss */
+.send-password-dialog ul li {
+  float: left;
+}
+/* line 9, ../../app/styles/directives/_send_password_dialog.scss */
+.send-password-dialog ul #checkbox {
+  width: 10%;
+}
+/* line 10, ../../app/styles/directives/_send_password_dialog.scss */
+.send-password-dialog ul #user {
+  width: 60%;
+}
+/* line 11, ../../app/styles/directives/_send_password_dialog.scss */
+.send-password-dialog ul #password {
+  width: 30%;
+}
+
+/* line 3, ../../app/styles/directives/_password.scss */
+.change-password .success {
+  background: url(./images/icon_status_complete.png) 0px 0px no-repeat;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  background-size: contain;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+/* line 13, ../../app/styles/directives/_password.scss */
+.change-password .suggestions {
+  margin-left: 35%;
+  display: block;
+  float: right;
+  clear: both;
+}
+/* line 18, ../../app/styles/directives/_password.scss */
+.change-password .suggestions li {
+  color: #999;
+}
+/* line 27, ../../app/styles/directives/_password.scss */
+.change-password .change-username-validity {
+  position: absolute;
+}
+/* line 32, ../../app/styles/directives/_password.scss */
+.change-password .form_row .form_input li {
+  display: block;
+}
+/* line 36, ../../app/styles/directives/_password.scss */
+.change-password .form_req {
+  clear: both;
+  padding: 10px 0px;
+}
+/* line 41, ../../app/styles/directives/_password.scss */
+.change-password .form_req > ul {
+  margin-left: 35%;
+}
+/* line 45, ../../app/styles/directives/_password.scss */
+.change-password .form_req > ul > li {
+  padding-left: 25px;
+  display: block;
+  line-height: 20px;
+  display: block;
+  color: #999999;
+  background-size: 20px 20px;
+}
+/* line 54, ../../app/styles/directives/_password.scss */
+.change-password .form_req > ul > li.required {
+  background: url(./images/icon_status_required_x2.png) 0px 0px no-repeat;
+  background: url(./images/icon_status_required.png) 0px 0px no-repeat\9;
+  background-size: 20px 20px;
+}
+/* line 60, ../../app/styles/directives/_password.scss */
+.change-password .form_req > ul > li.complete {
+  background: url(./images/icon_status_complete_x2.png) 0px 0px no-repeat;
+  background: url(./images/icon_status_complete.png) 0px 0px no-repeat\9;
+  color: #454545;
+  background-size: 20px 20px;
+}
+/* line 67, ../../app/styles/directives/_password.scss */
+.change-password .form_req > ul > li.incomplete {
+  background: url(./images/icon_status_incomplete_x2.png) 0px 0px no-repeat;
+  background: url(./images/icon_status_incomplete.png) 0px 0px no-repeat\9;
+  color: #CC5252;
+  background-size: 20px 20px;
+}
+/* line 75, ../../app/styles/directives/_password.scss */
+.change-password .pm_template_text .form_req {
+  float: right;
+}
+
+/* line 80, ../../app/styles/directives/_password.scss */
+.field_loader {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 30px;
+  width: 40px;
+  background: url(./images/loader_x2.gif) center center no-repeat;
+  background: url(./images/loader.gif) center center no-repeat\9;
+  background-size: 20px 20px;
+}
+
+/* line 94, ../../app/styles/directives/_password.scss */
+.req_label {
+  color: #999;
+  line-height: 20px;
+  float: left;
+  width: 35%;
+}
+
+/* line 101, ../../app/styles/directives/_password.scss */
+#username_suggest {
+  margin-top: 12px;
+}
+
+/* Card View Styling */
+/* line 8, ../../app/styles/pages/_cards.scss */
+.card_view #page_body {
+  position: relative;
+}
+
+/* line 12, ../../app/styles/pages/_cards.scss */
+.card_view .card_container {
+  margin-right: 240px !important;
+  min-height: 620px;
+}
+
+/* line 17, ../../app/styles/pages/_cards.scss */
+.card_view .card_container .card_container_inner {
+  padding: 20px;
+}
+
+/* Grid Container */
+/* line 23, ../../app/styles/pages/_cards.scss */
+#page_content_inner {
+  display: block;
+  padding: 0px;
+  background-color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Details Panel */
+/* line 34, ../../app/styles/pages/_cards.scss */
+.card_overview_container {
+  position: relative;
+  background-color: #efefef;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: block;
+  color: #606365;
+}
+
+/* line 43, ../../app/styles/pages/_cards.scss */
+.card_overview_container .card_desc {
+  display: block;
+  line-height: 20px;
+  font-size: 1.2em;
+  float: left;
+  width: 30%;
+}
+
+/* line 51, ../../app/styles/pages/_cards.scss */
+.card_overview_container .card_owner {
+  display: block;
+  line-height: 20px;
+  font-size: 1.2em;
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/* line 60, ../../app/styles/pages/_cards.scss */
+.card_overview_container .card_available_credit {
+  display: block;
+  line-height: 30px;
+  float: left;
+  clear: left;
+  margin-right: 20px;
+}
+
+/* line 68, ../../app/styles/pages/_cards.scss */
+.card_overview_container .card_current_balance {
+  display: block;
+  line-height: 30px;
+  float: left;
+  text-align: right;
+  clear: right;
+}
+
+/* line 76, ../../app/styles/pages/_cards.scss */
+.card_overview_container .sub_details,
+.trans_overview_container .sub_details {
+  float: left;
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* line 84, ../../app/styles/pages/_cards.scss */
+.card_overview_container .sub_value,
+.trans_overview_container .sub_value {
+  display: block;
+  line-height: 20px;
+  float: left;
+  width: 50%;
+  clear: left;
+}
+
+/* line 93, ../../app/styles/pages/_cards.scss */
+.card_overview_container .stmnt_period {
+  display: block;
+  line-height: 30px;
+  float: right;
+  width: 50%;
+}
+
+/* Menu (right hand side)*/
+/* line 105, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav {
+  position: absolute;
+  overflow: visible;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 240px;
+  z-index: 1;
+  box-shadow: 3px 0 0 rgba(0, 0, 0, 0.05) inset;
+  border-left: 1px solid #e3e3e3;
+}
+
+/* line 117, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav_inner {
+  padding: 20px 20px 40px;
+  display: block;
+}
+
+/* line 122, ../../app/styles/pages/_cards.scss */
+.card_view #page_slide_toggle {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 128, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 134, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav h2 {
+  font-size: 1.8em;
+}
+
+/* line 138, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav h3 {
+  line-height: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+/* line 146, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav ul {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+
+/* line 152, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav ul li {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* line 156, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav ul li a {
+  line-height: 20px;
+  padding: 5px 5px;
+  display: block;
+  color: #454545;
+}
+
+/* line 166, ../../app/styles/pages/_cards.scss */
+.card_view #page_slider_nav .col_easy_nav ul li a.active {
+  color: #454545;
+  background-color: #efefef;
+}
+
+/* Page Modules */
+/* line 176, ../../app/styles/pages/_cards.scss */
+.inner_col_left {
+  float: left;
+  width: 50%;
+}
+
+/* line 181, ../../app/styles/pages/_cards.scss */
+.inner_col_left_padding {
+  margin-right: 10px;
+}
+
+/* line 185, ../../app/styles/pages/_cards.scss */
+.inner_col_left .module_block {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* line 190, ../../app/styles/pages/_cards.scss */
+.inner_col_right {
+  float: right;
+  width: 50%;
+}
+
+/* line 195, ../../app/styles/pages/_cards.scss */
+.inner_col_right_padding {
+  margin-left: 10px;
+}
+
+/* line 199, ../../app/styles/pages/_cards.scss */
+.inner_col_right .module_block {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* line 204, ../../app/styles/pages/_cards.scss */
+.module_block {
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+/* line 210, ../../app/styles/pages/_cards.scss */
+.module_block .module_header {
+  position: relative;
+  padding: 10px;
+}
+
+/* line 215, ../../app/styles/pages/_cards.scss */
+.module_block .module_header h3 {
+  font-size: 1.3em;
+  line-height: 20px;
+  margin: 0px;
+}
+
+/* line 221, ../../app/styles/pages/_cards.scss */
+.module_block .module_header .module_actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* line 227, ../../app/styles/pages/_cards.scss */
+.module_content {
+  padding: 10px 0px 0px;
+}
+
+/* Module Element Styling */
+/** Line Items **/
+/* line 234, ../../app/styles/pages/_cards.scss */
+ul.line_item_list {
+  border-top: 1px solid #e3e3e3;
+}
+
+/* line 238, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+/* line 242, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a {
+  display: block;
+  background: url(../images/icon_launch_arrow.png) right 10px no-repeat;
+  background-size: 20px 20px;
+  padding: 10px 0px;
+  position: relative;
+  color: inherit;
+}
+
+/* line 251, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a:hover {
+  background-color: #f9f9f9;
+}
+
+/* line 255, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a .item_icon {
+  background: url(../images/icon_line_split_item.png) 0px 0px no-repeat;
+  background-size: 20px 40px;
+  height: 20px;
+  width: 20px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+
+/* line 266, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a .item_count {
+  display: block;
+  line-height: 20px;
+  margin-right: 5px;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+}
+
+/* line 275, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a .item_description {
+  display: block;
+  line-height: 20px;
+  margin-left: 40px;
+  margin-right: 100px;
+}
+
+/* line 282, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a .item_price {
+  display: block;
+  line-height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+/* line 290, ../../app/styles/pages/_cards.scss */
+ul.line_item_list li a .item_price .currency {
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+/* Custom Payment Radio Inputs **/
+/* line 296, ../../app/styles/pages/_cards.scss */
+.other_pay_container {
+  float: right;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+/* line 304, ../../app/styles/pages/_cards.scss */
+.other_pay_container input {
+  float: none;
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+/* line 311, ../../app/styles/pages/_cards.scss */
+.instruction_text {
+  display: block;
+  padding-bottom: 10px;
+  font-size: 1.1em;
+  line-height: 15px;
+  color: #606365;
+  outline: none;
+}
+
+/* Page Actions */
+/* line 322, ../../app/styles/pages/_cards.scss */
+.page_actions {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 20px;
+  margin-top: 20px;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+/* line 331, ../../app/styles/pages/_cards.scss */
+.page_actions .page_actions_left {
+  float: left;
+  width: 50%;
+}
+
+/* line 336, ../../app/styles/pages/_cards.scss */
+.page_actions .page_actions_left > ul {
+  float: left;
+  display: block;
+}
+
+/* line 342, ../../app/styles/pages/_cards.scss */
+.page_actions .page_actions_left > ul > li {
+  margin-right: 10px;
+  float: left;
+  display: block;
+}
+
+/* line 348, ../../app/styles/pages/_cards.scss */
+.page_actions .page_actions_right {
+  float: right;
+  width: 50%;
+}
+
+/* line 353, ../../app/styles/pages/_cards.scss */
+.page_actions .page_actions_right > ul {
+  float: right;
+  display: block;
+}
+
+/* line 358, ../../app/styles/pages/_cards.scss */
+.page_actions .page_actions_right > ul > li {
+  margin-left: 10px;
+  float: left;
+  display: block;
+}
+
+/* Inquiry drop menu to display X*/
+/* line 2, ../../app/styles/_inquiry.scss */
+.inquiry_close {
+  height: 20px;
+  width: 20px;
+  background: url(../styles/images/icon_dd_close_btn.png) center center no-repeat;
+  background-size: 10px 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  outline: none;
+  text-align: left;
+}
+
+/* line 15, ../../app/styles/_inquiry.scss */
+.dropemenu-heading {
+  font-size: 14px;
+}

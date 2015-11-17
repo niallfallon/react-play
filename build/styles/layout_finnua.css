@@ -1,0 +1,518 @@
+@charset "UTF-8";
+/* Modifications to layout.css
+   suggested by Finnua */
+
+/*
+  images base url changed from images/ to ../images/ in layout.css
+*/
+
+h3 {
+  font-size: 1.17em !important;
+}
+
+.main-content {
+  /*float:left;*/
+  width:100%;
+}
+
+.main-content {
+  position: relative;
+  display: block;
+  background-color: #F3F3F3;
+  padding: 10px;
+  min-height: 50em;
+  overflow-x: hidden;
+}
+
+.grid-container {
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  overflow-x: hidden;
+  float: left;
+  margin-top: 7px;
+  height: 100%;
+  width:100%;
+  float:left;
+}
+
+.table-container {
+  -webkit-transition: all .5s ease;
+  padding: 20px 20px 15px;
+  min-height: 500px;
+}
+
+.table-offset {
+  padding: 30px;
+}
+
+.full {
+  width: 100% !important;
+}
+
+.module_block {
+  /*width: 100%;*/
+}
+
+#page_header {
+  padding: 20px !important;
+  min-height: 70px;
+}
+
+#page_nav.navbar {
+  margin-top:70px !important;
+  border:none;
+  border-radius: 0;
+  margin-bottom: -12px;
+}
+
+#page_nav.navbar ul {
+  margin: 0px;
+}
+
+.navbar .nav {
+  width: 100%;
+}
+
+ul.navbar-submenu {
+  position: absolute;
+  z-index: 1;
+  line-height: 30px;
+  display: block;
+  background: #fff;
+  margin: 0px 0 0 0 !important;
+  min-width: 120px;
+}
+
+ul.navbar-submenu button {
+  color: #777;
+}
+
+ul.navbar-submenu li button.active {
+  background: #FFF;
+}
+
+/* Grid Container */
+#page_body #page_content #page_content_inner {
+  float: left;
+  width: 100%;
+}
+
+.faq_container {
+  display: inherit;
+}
+
+/* User Preferences */
+
+[fd-change-cas-preference] [fd-dialog] {
+  display: inline;
+}
+
+[fd-change-cas-preference] button {
+  color: #007FB1;
+}
+
+.right_opts {
+  width: 100%;
+  position: relative;
+}
+
+.right_opts > :first-child {
+  width: 100%;
+  float: left;
+  padding-right: 35px;
+}
+
+.right_opts > :nth-child(2) {
+  position: absolute;
+  right: -3px;
+  top: 0px;
+}
+
+.right_opts .form_input,
+.right_opts .form_textarea {
+  width: 66% !important;
+}
+
+.filter_inline .right_opts > :first-child {
+  width: 100%;
+  float: left;
+}
+
+.filter_inline .right_opts > :nth-child(2) {
+  position: absolute;
+  right: 42px;
+  top: 0;
+}
+
+.text_style_filter_noOps {
+  width: 100% !important;
+}
+
+.has_button > :nth-child(2) {
+  position: absolute;
+  right: -3px;
+  top: 0;
+}
+
+.has_button .form_input li,
+.has_button .form_select li {
+  width: 100% !important;
+  padding-right: 40px;
+}
+
+.hasErrors > :first-child {
+  background-color: #FFDBDB !important;
+}
+
+/* Disabled buttons should be greyed out */
+button[disabled] {
+  opacity: .4;
+}
+
+.question_mark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("images/glyphicons-halflings-white.png");
+  background-position: -90px -93px;
+  cursor: pointer;
+}
+
+/* Users & Cards Table */
+
+/* Users & Cards Table */
+
+.card_status_icon {
+  float: none!important; /* important until we merge the css files */
+}
+
+.change_user_status,
+.change_user_acc_status,
+.change_card_status {
+  vertical-align: top;
+  float: none;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+
+.inner_content {
+  width: 75%;
+  float: left;
+}
+
+.inner_navigation {
+  float: left;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+.inner_label span, .inner_label h2 {
+  float: left;
+  width: 100%;
+  background-color: #F0F0F0;
+  padding: 15px 20px;
+  margin: 5px 0px;
+}
+
+.easy_content {
+  width: 100%;
+  float: left;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 3px;
+  min-height: 520px;
+  position: relative;
+}
+
+.bottom_nav {
+  position: absolute;
+  bottom: 3%;
+  width: 95%;
+  margin: 0px 2%;
+}
+
+.bottom_nav hr {
+  border-color: rgb(187, 187, 187);
+  margin: 10px 0;
+}
+
+.bottom_nav button {
+  margin: 0 0 0 15px;
+}
+
+.question_mark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("images/glyphicons-halflings-white.png");
+  background-position: -90px -93px;
+  cursor: pointer;
+}
+
+.toggle_hidden_fields {
+  width: 96%;
+  float: left;
+  margin: 10px 2%;
+}
+
+.toggle_hidden_fields button {
+  float: right;
+  border: 1px solid #B0B0B0;
+  border-radius: 2px;
+  font-size: 1em;
+  height: 20px;
+  background-color: white;
+  color: red;
+}
+
+.toggle_hidden_fields button.active {
+  background-color: #E1E1E1;
+}
+
+/*Needed for FE code drop 21/07/2015 */
+
+.column {
+  background-color: #FFF;
+  float: left;
+  display: block;
+}
+
+.column_inner {
+    margin: 10px;
+}
+
+.column_container {
+    margin: 10px;
+}
+
+.column_3 > .column.width_3 {
+    width: 100%;
+}
+
+.inner_col_left {
+  float: left;
+  width: 50%;
+}
+
+.inner_col_left .module_block,
+.inner_col_right .module_block {
+  width: 100% !important;
+}
+
+.module_block {
+  /*width: 100%;*/
+}
+
+.full_width {
+  float: left;
+  width: 100% !important;
+}
+
+.bg_color_5 {
+    background-color: #C7EAFB !important;
+}
+
+.fd_form .form_container .form_row.inline {
+  margin-bottom: 10px;
+}
+
+.fd_form .form_container .form_row .form_select select,
+.fd_form .form_container .form_row .form_select input,
+.fd_form .form_container .form_row.inline .form_select select,
+.fd_form .form_container .form_row.inline .form_select input {
+  /*background-color: white !important; dont use important.. we need disabled styling as well */
+  padding: 0 5px;
+}
+
+.fd_form .form_container .form_row.inline .form_label span {
+    font-weight: inherit;
+}
+
+.fd_form .form_container .form_row.inline .form_radio ul li label {
+  margin-left: 25px; /* Need more space between a radio and its label */
+}
+
+.fd_form .form_container .form_row.inline .form_textarea {
+  width: 70%;
+}
+
+.mandatory {
+    color: #C00;
+}
+
+/*To override bootstrap.css panel style*/
+.panel {
+  border-radius: 0px;
+}
+
+.dd_option_panel {
+  width: inherit;
+  z-index: 1010;
+}
+
+.dd_option_panel > ul {
+    border-top: 1px solid #E3E3E3;
+}
+
+/* For trace screen details */
+.trace_details_panel {
+  border-bottom:1px solid #e3e3e3;
+  margin-bottom:20px;
+  padding-bottom:10px;
+}
+
+.trace_details_panel .trace_details_col {
+  display: block;
+  width:50%;
+  float: left;
+}
+
+.trace_details_panel .trace_details_col .trace_label {
+  line-height:20px;
+  margin-right:10px;
+  width:100px;
+  font-weight:bold;
+}
+
+/* For approver type */
+
+.form_row.inline > .form_input input.input_has_border[readonly="readonly"] {
+    border: 1px solid #F3F3F3 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    cursor: default !important;
+}
+
+.form_row.inline .form_radio.inline ul li {
+    clear: none;
+    width: auto;
+}
+
+.form_row.inline .form_input {
+    width: 65%;
+    float: right;
+}
+
+.form_row.inline .form_radio {
+  width: 70%;
+}
+
+.form_row .form_input {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.form_textarea>ul>li {
+  /*padding-left: 40px;*/
+}
+
+.form_row .form_textarea textarea[disabled="disabled"] {
+  resize: none;
+  width: 100%;
+  height: 70px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BABABA #E3E3E3 #E3E3E3;
+}
+
+.pm_template_text textarea {
+  resize: none;
+}
+
+.pm_template_comment {
+  width: 92%;
+  background-color: #FFF;
+  height: 80px;
+  float: right;
+  border: none;
+  padding: 0;
+}
+
+.search_label {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* ALERT MESSAGES */
+.inline_alert_message {
+  line-height: 20px;
+  display: block;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 10px 12px;
+  padding-left: 30px;
+}
+
+.inline_alert_message.success {
+  background-image: url(images/inline_message_success.png);
+}
+
+.inline_alert_message.error {
+  background-image: url(images/inline_message_failure.png);
+}
+
+.success {
+  background-color: #499945;
+}
+
+.failure {
+  background-color: #FF0000 !important;
+}
+/* END ALERT MESSAGES */
+
+.templates_radio_legend {
+  width: 40% !important;
+}
+
+
+/* Defect fix FSIss00021691 - start */
+ul.output_list > li .output_container .output_details .output_title {
+    line-height: 20px;
+    display: block;
+    color: #008EC7;
+}
+
+ul.output_list > li .output_container .output_file.output_txt {
+    background-image: url("/UI/styles/images/icon_txt_x2.png");
+}
+
+ul.output_list > li .output_container .output_file {
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 16px;
+    padding: 0px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    border-radius: 4px;
+    width: 16px;
+    text-indent: -999em;
+    background-position: center center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}
+/* Defect fix FSIss00021691 - end */
+
+ /* Defect fix FSIss00022089 - start */
+select.select_width {
+  width: auto;
+}
+/* Defect fix FSIss00022089 - end */
+
+/* Defect fix FSIss00022472 - start */
+.form_row .form_input {
+  float: right;
+  width: 65%;
+}
+
+.clearfix, .claro .dijitDialogPaneActionBar {
+  /*margin-top: 20px;*/
+}
+
+/* Defect fix FSIss00022472 - end */
