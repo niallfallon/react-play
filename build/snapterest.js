@@ -23199,26 +23199,14 @@ module.exports = App;
 'use strict';
 
 var React = require('react');
+var AppDispatcher = require('../dispatcher');
+var StoreMixin = require('../mixins/store');
 
 var Grid = React.createClass({
   displayName: 'Grid',
 
-  // props = collection
-  propTypes: {
-    //collection: React.PropTypes.object
-  },
-
-  componentDidMount: function componentDidMount() {
-    this.props.store.bind('change', this.storeChanged);
-  },
-
-  componentWillUnmount: function componentWillUnmount() {
-    this.props.store.unbind('change', this.storeChanged);
-  },
-
-  storeChanged: function storeChanged() {
-    this.forceUpdate();
-  },
+  // props = store
+  mixins: [StoreMixin],
 
   render: function render() {
     var _this = this;
@@ -23245,7 +23233,7 @@ var Grid = React.createClass({
               null,
               React.createElement('input', { type: 'checkbox' })
             ),
-            this.props.store.columns.map(function (col) {
+            this.state.store.columns.map(function (col) {
               return React.createElement(
                 'th',
                 { key: col.key },
@@ -23261,8 +23249,8 @@ var Grid = React.createClass({
         React.createElement(
           'tbody',
           null,
-          this.props.store.getRows().map(function (row) {
-            return React.createElement(GridRow, { key: row.field, row: row, columns: _this.props.store.columns });
+          this.state.store.getRows().map(function (row) {
+            return React.createElement(GridRow, { key: row.field, store: _this.state.store, row: row, columns: _this.state.store.columns });
           })
         )
       )
@@ -23278,11 +23266,18 @@ var GridRow = React.createClass({
   // - row
   // - columns
 
+  onSelect: function onSelect() {
+    AppDispatcher.dispatch({
+      eventName: 'selectRow-' + this.props.store.storeName,
+      row: this.props.row
+    });
+  },
+
   render: function render() {
     var _this = this;
     return React.createElement(
       'tr',
-      null,
+      { onClick: this.onSelect },
       React.createElement('td', null),
       React.createElement('td', null),
       this.props.columns.map(function (column) {
@@ -23310,17 +23305,9 @@ var GridCell = React.createClass({
 
 });
 
-/*  <td ng-if="outputfooter" class="toggle_cell" id="{{'trans_btn_' + row.transId}}">
-    <input ng-if="row.hasChildren" id="{{'toggle_' + row.transId}}" type="button" aria-expanded="false" ng-click="toggleChildren(row, $event)" class="btn_trans_toggle" ng-class="{isOpen:row.isOpen}" title="{{::toggleRowTitle | translate}}" value="{{row.childrenCount}}">
-  </td>
-   <td ng-if="multiselect" class="chbox_cell">
-    <input type="checkbox" ng-click="selectRow('1', row, $event)" ng-model="row.selected" title="{{::selectRowTitle | translate}}" id= "{{'chbox_' + ($index + 1)}}" />
-    <span class="hidden_label"><label for="{{'chbox_' + ($index + 1)}}" translate>{{selectRowTitle}}</label></span>
-  </td>*/
-
 module.exports = Grid;
 
-},{"react":206}],211:[function(require,module,exports){
+},{"../dispatcher":217,"../mixins/store":218,"react":206}],211:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -23475,31 +23462,22 @@ module.exports = Menu;
 
 var React = require('react');
 var AppDispatcher = require('../dispatcher');
+var StoreMixin = require('../mixins/store');
 
 var Pager = React.createClass({
   displayName: 'Pager',
 
-  componentDidMount: function componentDidMount() {
-    this.props.store.bind('change', this.storeChanged);
-  },
-
-  componentWillUnmount: function componentWillUnmount() {
-    this.props.store.unbind('change', this.storeChanged);
-  },
-
-  storeChanged: function storeChanged() {
-    this.forceUpdate();
-  },
+  mixins: [StoreMixin],
 
   previous: function previous() {
     AppDispatcher.dispatch({
-      eventName: 'pagePrev-' + this.props.store.storeName
+      eventName: 'pagePrev-' + this.state.store.storeName
     });
   },
 
   next: function next() {
     AppDispatcher.dispatch({
-      eventName: 'pageNext-' + this.props.store.storeName
+      eventName: 'pageNext-' + this.state.store.storeName
     });
   },
 
@@ -23535,7 +23513,7 @@ var Pager = React.createClass({
             'li',
             null,
             'Page no. ',
-            this.props.store.currentPageNumber
+            this.state.store.currentPageNumber
           )
         )
       )
@@ -23545,7 +23523,7 @@ var Pager = React.createClass({
 
 module.exports = Pager;
 
-},{"../dispatcher":217,"react":206}],215:[function(require,module,exports){
+},{"../dispatcher":217,"../mixins/store":218,"react":206}],215:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -23607,8 +23585,29 @@ var Pager = require('./Pager.react');
 var GridFilter = require('./GridFilter.react');
 var Search = require('./Search.react');
 var UserCardsStore = require('../stores/usercards_store.js');
+
 var UserCards = React.createClass({
   displayName: 'UserCards',
+
+  getInitialState: function getInitialState() {
+    return {
+      store: UserCardsStore
+    };
+  },
+
+  componentDidMount: function componentDidMount() {
+    UserCardsStore.bind('change', this.storeChanged);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    UserCardsStore.unbind('change', this.storeChanged);
+  },
+
+  storeChanged: function storeChanged() {
+    this.setState({
+      store: UserCardsStore
+    });
+  },
 
   render: function render() {
     return React.createElement(
@@ -23625,15 +23624,17 @@ var UserCards = React.createClass({
         React.createElement(
           'div',
           { className: 'pull-right' },
-          React.createElement(GridFilter, { store: UserCardsStore, className: 'pull-left' }),
-          React.createElement(Search, { className: 'pull-left', store: UserCardsStore })
+          React.createElement(GridFilter, { store: this.state.store, className: 'pull-left' }),
+          React.createElement(Search, { className: 'pull-left', store: this.state.store })
         )
       ),
       React.createElement(
         'div',
         { className: 'grid-container' },
-        React.createElement(Grid, { store: UserCardsStore }),
-        React.createElement(Pager, { store: UserCardsStore })
+        'Selected = ',
+        this.state.store.selectedRow,
+        React.createElement(Grid, { store: this.state.store }),
+        React.createElement(Pager, { store: this.state.store })
       )
     );
   }
@@ -23642,7 +23643,7 @@ var UserCards = React.createClass({
 
 module.exports = UserCards;
 
-},{"../stores/usercards_store.js":218,"./Grid.react":210,"./GridFilter.react":211,"./Pager.react":214,"./Search.react":215,"react":206}],217:[function(require,module,exports){
+},{"../stores/usercards_store.js":219,"./Grid.react":210,"./GridFilter.react":211,"./Pager.react":214,"./Search.react":215,"react":206}],217:[function(require,module,exports){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -23892,6 +23893,33 @@ module.exports = new Dispatcher();
 },{"invariant":26}],218:[function(require,module,exports){
 'use strict';
 
+var storeMixin = {
+  getInitialState: function getInitialState() {
+    return {
+      store: this.props.store
+    };
+  },
+
+  componentDidMount: function componentDidMount() {
+    this.props.store.bind('change', this.storeChanged);
+  },
+
+  componentWillUnmount: function componentWillUnmount() {
+    this.props.store.unbind('change', this.storeChanged);
+  },
+
+  storeChanged: function storeChanged() {
+    this.setState({
+      store: this.props.store
+    });
+  }
+};
+
+module.exports = storeMixin;
+
+},{}],219:[function(require,module,exports){
+'use strict';
+
 var AppDispatcher = require('../dispatcher');
 var MicroEvent = require('../utils/eventing');
 
@@ -23903,7 +23931,7 @@ for (var count = 0; count < 1000; count++) {
 
 var UserCardsStore = {
   storeName: 'usercards',
-  pageSize: 100,
+  pageSize: 10,
   currentPageNumber: 1,
   columns: [{ key: 0, title: 'Name', field: 'name' }, { key: 1, title: 'Age', field: 'age' }, { key: 2, title: 'Score', field: 'score' }],
 
@@ -23939,6 +23967,10 @@ var UserCardsStore = {
   next: function next() {
     // need to check for upper limit
     this.currentPageNumber = this.currentPageNumber + 1;
+  },
+
+  selectRow: function selectRow(row) {
+    this.selectedRow = row;
   }
 };
 
@@ -23958,12 +23990,17 @@ AppDispatcher.register(function (payload) {
       UserCardsStore.prev();
       UserCardsStore.trigger('change');
       break;
+    case 'selectRow-' + UserCardsStore.storeName:
+      UserCardsStore.selectRow(payload.row);
+      UserCardsStore.trigger('change');
+      break;
+
   }
 });
 
 module.exports = UserCardsStore;
 
-},{"../dispatcher":217,"../utils/eventing":219}],219:[function(require,module,exports){
+},{"../dispatcher":217,"../utils/eventing":220}],220:[function(require,module,exports){
 /**
  * MicroEvent.js debug
  *

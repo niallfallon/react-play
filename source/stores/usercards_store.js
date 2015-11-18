@@ -13,7 +13,7 @@ for(var count = 0; count < 1000; count++) {
 
 var UserCardsStore = {
   storeName: 'usercards',
-  pageSize: 100,
+  pageSize: 10,
   currentPageNumber: 1,
   columns: [
     {key: 0, title: 'Name', field: 'name'},
@@ -53,6 +53,10 @@ var UserCardsStore = {
   next: function() {
     // need to check for upper limit
     this.currentPageNumber = this.currentPageNumber + 1;
+  },
+
+  selectRow: function(row) {
+    this.selectedRow = row;
   }
 };
 
@@ -72,6 +76,11 @@ AppDispatcher.register(function(payload) {
       UserCardsStore.prev();
       UserCardsStore.trigger('change');
       break;
+    case 'selectRow-' + UserCardsStore.storeName:
+      UserCardsStore.selectRow(payload.row);
+      UserCardsStore.trigger('change');
+      break;
+    
   } 
 }); 
 

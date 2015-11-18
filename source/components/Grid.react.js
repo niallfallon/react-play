@@ -1,22 +1,10 @@
 var React = require('react');
+var AppDispatcher = require('../dispatcher');
+var StoreMixin = require('../mixins/store');
 
 var Grid = React.createClass({
-  // props = collection
-  propTypes: {
-    //collection: React.PropTypes.object
-  },
-
-  componentDidMount: function() {
-   this.props.store.bind('change', this.storeChanged);
-  },
-
-  componentWillUnmount: function() {
-    this.props.store.unbind('change', this.storeChanged);
-  },
-
-  storeChanged: function() {
-    this.forceUpdate();
-  },
+  // props = store
+  mixins: [StoreMixin],
 
   render: function() {
     var _this = this;
@@ -32,7 +20,7 @@ var Grid = React.createClass({
                       <input type="checkbox" /> 
                     </th>
 
-                    {this.props.store.columns.map(function(col) {
+                    {this.state.store.columns.map(function(col) {
                       return <th key={col.key}><span>{col.title}</span></th>
                     })}
 
@@ -40,8 +28,8 @@ var Grid = React.createClass({
                 </thead>
                 <tbody>
                   {
-                    this.props.store.getRows().map(function(row) {
-                      return <GridRow key={row.field} row={row} columns={_this.props.store.columns}/>
+                    this.state.store.getRows().map(function(row) {
+                      return <GridRow key={row.field} store={_this.state.store} row={row} columns={_this.state.store.columns} />
                     })
                   }
                 </tbody>
@@ -53,12 +41,19 @@ var Grid = React.createClass({
 
 var GridRow = React.createClass({
   // expect props:
-  // - row
+  // - row 
   // - columns
+
+  onSelect: function() {
+    AppDispatcher.dispatch({
+      eventName: 'selectRow-' + this.props.store.storeName,
+      row: this.props.row 
+    });
+  },
 
   render: function() {
     var _this = this;
-    return  <tr>
+    return  <tr onClick={this.onSelect}>
               <td></td>
               <td></td>
               {
@@ -82,14 +77,5 @@ var GridCell = React.createClass({
 
 });
 
-
-        /*  <td ng-if="outputfooter" class="toggle_cell" id="{{'trans_btn_' + row.transId}}">
-            <input ng-if="row.hasChildren" id="{{'toggle_' + row.transId}}" type="button" aria-expanded="false" ng-click="toggleChildren(row, $event)" class="btn_trans_toggle" ng-class="{isOpen:row.isOpen}" title="{{::toggleRowTitle | translate}}" value="{{row.childrenCount}}">
-          </td>
-
-          <td ng-if="multiselect" class="chbox_cell">
-            <input type="checkbox" ng-click="selectRow('1', row, $event)" ng-model="row.selected" title="{{::selectRowTitle | translate}}" id= "{{'chbox_' + ($index + 1)}}" />
-            <span class="hidden_label"><label for="{{'chbox_' + ($index + 1)}}" translate>{{selectRowTitle}}</label></span>
-          </td>*/
 
 module.exports = Grid;
